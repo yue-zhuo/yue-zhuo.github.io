@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2020-01-26 Sun 17:15 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Yue Zhuo">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/website/css/site.css" type="text/css"/>
+
+<link rel="alternate" type="application/rss+xml" href="/website/rss.xml"
+	  title="RSS feed">
+<script type="text/javascript" src="js/menu_highlight.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<div class="topnav">
+  <ul>
+    <li><a href='/website/index.html'>Home</a></li>
+    <li><a href='/website/research.html'>Research</a></li>
+    <li><a href='/website/bio.html'>Bio</a></li>
+    <li><a href='/website/publications.html'>Publications</a></li>
+    <li><a href='/website/news.html'>News</a></li>
+  </ul>
+</div>
+</div>
+<div id="content">
+<h1 class="title">Publications</h1>
+
+<div id="outline-container-org9c1b613" class="outline-2">
+<h2 id="book_chapters">Patents</h2>
+<div class="outline-text-2" id="text-book_chapters">
+<ol class="org-ol">
+<li><p><a name="Cunningham2019"></a>  Brian&nbsp;T. Cunningham, <b>Yue Zhuo</b>, Brendan&nbsp;A. Harley, Ji&nbsp;Sun Choi, Yu, Thibault  Marin, and Yi&nbsp;Lu.  Photonic Resonator Absorption Microscopy (PRAM) for  Digital Resolution Biomolecular Diagnostics, 2019. [&nbsp;<a href="publications_bib.html#Cunningham2019">bib</a>&nbsp;|  <a href="https://www.patentguru.com/US2019127784A1">DOI</a>&nbsp;|  <a href="/website/docs/Cunningham2019.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Cunningham2019a"></a>  Brian&nbsp;T. Cunningham, <b>Yue Zhuo</b>, Brendan&nbsp;A. Harley, Ji&nbsp;Sun Choi, Yu, and Thibault  Marin.  Photonic Resonator Outcoupler Microscopy (PROM), 2019. [&nbsp;<a href="publications_bib.html#Cunningham2019a">bib</a>&nbsp;|  <a href="https://www.patentguru.com/US2019120766A1">DOI</a>&nbsp;|  <a href="/website/docs/Cunningham2019a.pdf">PDF</a>&nbsp;]  </p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge743388" class="outline-2">
+<h2 id="publications_book_chapters">Book chapters</h2>
+<div class="outline-text-2" id="text-publications_book_chapters">
+<ol class="org-ol">
+<li><p><a name="Choi2017"></a>  Ji&nbsp;Sun Choi, <b>Yue Zhuo</b>, Brian&nbsp;T. Cunningham, and Brendan&nbsp;A. Harley.  <em>Non-invasive optical imaging on photonic crystalsurface of  stem cell differentiation in biomaterials</em>, pages 195--207.  Elsevier Inc., 2017. [&nbsp;<a href="publications_bib.html#Choi2017">bib</a>&nbsp;|  <a href="/website/docs/Choi2017.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2016a"></a>  <b>Yue Zhuo</b> and Brian&nbsp;T. Cunningham.  <em>Label-Free Biosensor Imaging on Photonic Crystal  Surfaces (Chpater 2)</em>, pages 31--55.  2016. [&nbsp;<a href="publications_bib.html#Zhuo2016a">bib</a>&nbsp;|  <a href="/website/docs/Zhuo2016a.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2011"></a>  <b>Yue Zhuo</b>, Xiao-Long Wu, Justin&nbsp;P. Haldar, Thibault Marin, Wen-mei&nbsp;W. Hwu,  Zhi-Pei Liang, and Bradley&nbsp;P. Sutton.  <em>Using GPUs to Accelerate Advanced MRI Reconstruction  with Field Inhomogeneity Compensation</em>.  Elsevier Science, 2011. [&nbsp;<a href="publications_bib.html#Zhuo2011">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1016/B978-0-12-384988-5.00044-9">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2011.pdf">PDF</a>&nbsp;]  </p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgcc31187" class="outline-2">
+<h2 id="journal_publications">Selected Journal publications</h2>
+<div class="outline-text-2" id="text-journal_publications">
+<ol class="org-ol">
+<li><p><a name="Zhuo2019"></a>  <b>Yue Zhuo</b>, Huan Hu, Yifei Wang, Thibault Marin, and Meng Lu.  Photonic crystal slab biosensors fabricated with helium ion  lithography (HIL).  <em>Sensors and Actuators A: Physical</em>, 297:111493, 2019. [&nbsp;<a href="publications_bib.html#Zhuo2019">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1016/j.sna.2019.07.017">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2019.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Canales-Benavides2019"></a>  Arturo Canales-Benavides, <b>Yue Zhuo</b>, Andrea&nbsp;M. Amitrano, Minsoo Kim, Raul&nbsp;I.  Hernandez-Aranda, P.&nbsp;Scott Carney, and Martin Schnell.  Accessible quantitative phase imaging in confocal microscopy with  sinusoidal-phase synthetic optical holography.  <em>Applied Optics</em>, 58(5):A55--A64, 2019. [&nbsp;<a href="publications_bib.html#Canales-Benavides2019">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1364/Ao.58.000a55">DOI</a>&nbsp;|  <a href="/website/docs/Canales-Benavides2019.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2018"></a>  <b>Yue Zhuo</b>, Ji&nbsp;Sun Choi, Thibault Marin, Hojeong Yu, Brendan&nbsp;A. Harley, and  Brian&nbsp;T. Cunningham.  Quantitative analysis of focal adhesion dynamics using photonic  resonator outcoupler microscopy (PROM).  <em>Light: Science &amp; Applications</em>, 7(1):9, 2018. [&nbsp;<a href="publications_bib.html#Zhuo2018">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1038/s41377-018-0001-5">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2018.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2016"></a>  <b>Yue Zhuo</b>, Ji&nbsp;Sun Choi, Thibault Marin, Hojeong Yu, Brendan&nbsp;A. Harley, and  Brian&nbsp;T. Cunningham.  Quantitative imaging of cell membrane-associated effective mass  density using Photonic Crystal Enhanced Microscopy (PCEM).  <em>Progress in Quantum Electronics</em>, 50:1--18, 2016. [&nbsp;<a href="publications_bib.html#Zhuo2016">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1016/j.pquantelec.2016.10.001">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2016.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2015a"></a>  <b>Yue Zhuo</b> and Brian&nbsp;T. Cunningham.  Label-Free Biosensor Imaging on Photonic Crystal  Surfaces.  <em>Sensors (Basel, Switzerland)</em>, 15(9):21613--21635, 2015. [&nbsp;<a href="publications_bib.html#Zhuo2015a">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.3390/s150921613">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2015a.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Cunningham2016"></a>  Brian&nbsp;T. Cunningham, Meng Zhang, <b>Yue Zhuo</b>, Lydia Kwon, and Caitlin Race.  Recent Advances in Biosensing With Photonic Crystal  Surfaces: A Review.  <em>IEEE Sensors Journal</em>, 16(10):3349--3366, 2016. [&nbsp;<a href="publications_bib.html#Cunningham2016">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1109/JSEN.2015.2429738">DOI</a>&nbsp;|  <a href="/website/docs/Cunningham2016.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2015"></a>  <b>Yue Zhuo</b>, Tongcheng Qian, Yiqian Wu, Jihye Seong, Ya&nbsp;Gong, Hongwei Ma, Yingxiao  Wang, and Shaoying Lu.  Subcellular and Dynamic Coordination between Src Activity  and Cell Protrusion in Microenvironment.  <em>Scientific Reports</em>, 5:12963, 2015. [&nbsp;<a href="publications_bib.html#Zhuo2015">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1038/srep12963">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2015.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Hu2014"></a>  Huan Hu, <b>Yue Zhuo</b>, Muhammed&nbsp;E. Oruc, Brian&nbsp;T. Cunningham, and William&nbsp;P. King.  Nanofluidic channels of arbitrary shapes fabricated by tip-based  nanofabrication.  <em>Nanotechnology</em>, 25(45):455301, 2014. [&nbsp;<a href="publications_bib.html#Hu2014">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1088/0957-4484/25/45/455301">DOI</a>&nbsp;|  <a href="/website/docs/Hu2014.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2014"></a>  <b>Yue Zhuo</b>, Huan Hu, Weili Chen, Meng Lu, Limei Tian, Hojeong Yu, Kenneth&nbsp;D.  Long, Edmond Chow, William&nbsp;P. King, Srikanth Singamaneni, and Brian&nbsp;T.  Cunningham.  Single nanoparticle detection using photonic crystal enhanced  microscopy.  <em>The Analyst</em>, 139(5):1007--1015, 2014. [&nbsp;<a href="publications_bib.html#Zhuo2014">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1039/c3an02295a">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2014.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Chen2013"></a>  Weili Chen, Kenneth&nbsp;D. Long, Meng Lu, Vikram Chaudhery, Hojeong Yu, Ji&nbsp;Sun  Choi, James Polans, <b>Yue Zhuo</b>, Brendan A.&nbsp;C. Harley, and Brian&nbsp;T. Cunningham.  Photonic crystal enhanced microscopy for imaging of live cell  adhesion.  <em>The Analyst</em>, 138(20):5886--5894, 2013. [&nbsp;<a href="publications_bib.html#Chen2013">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1039/c3an01541f">DOI</a>&nbsp;|  <a href="/website/docs/Chen2013.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Sun2013"></a>  Jie Sun, Shaoying Lu, Mingxing Ouyang, Li-Jung Lin, <b>Yue Zhuo</b>, Bo&nbsp;Liu, Shu  Chien, Benjamin&nbsp;G. Neel, and Yingxiao Wang.  Antagonism between binding site affinity and conformational  dynamics tunes alternative cis-interactions within Shp2.  <em>Nature Communications</em>, 4:2037, 2013. [&nbsp;<a href="publications_bib.html#Sun2013">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1038/ncomms3037">DOI</a>&nbsp;|  <a href="/website/docs/Sun2013.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Liao2013"></a>  Xiaoling Liao, Shaoying Lu, Yiqian Wu, Wenfeng Xu, <b>Yue Zhuo</b>, Qin Peng, Bo&nbsp;Li,  Ling Zhang, and Yingxiao Wang.  The effect of differentiation induction on FAK and Src activity  in live HMSCs visualized by FRET.  <em>PloS one</em>, 8(8):e72233, 2013. [&nbsp;<a href="publications_bib.html#Liao2013">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1371/journal.pone.0072233">DOI</a>&nbsp;|  <a href="/website/docs/Liao2013.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Liao2012"></a>  Xiaoling Liao, Shaoying Lu, <b>Yue Zhuo</b>, Christina Winter, Wenfeng Xu, and  Yingxiao Wang.  Visualization of Src and FAK Activity during the  Differentiation Process from HMSCs to Osteoblasts (Src and FAK  Activity during Differentiation).  <em>PloS one</em>, 7(8):e42709, 2012. [&nbsp;<a href="publications_bib.html#Liao2012">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1371/journal.pone.0042709">DOI</a>&nbsp;|  <a href="/website/docs/Liao2012.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Seong2011"></a>  Jihye Seong, Mingxing Ouyang, Taejin Kim, Jie Sun, Po-Chao Wen, Shaoying Lu,  <b>Yue Zhuo</b>, Nicholas&nbsp;M. Llewellyn, David&nbsp;D. Schlaepfer, Jun-Lin Guan, Shu  Chien, and Yingxiao Wang.  Detection of focal adhesion kinase activation at membrane  microdomains by fluorescence resonance energy transfer.  <em>Nature Communications</em>, 2:406, 2011. [&nbsp;<a href="publications_bib.html#Seong2011">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1038/ncomms1414">DOI</a>&nbsp;|  <a href="/website/docs/Seong2011.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Liao2011"></a>  Xiaoling Liao, Shaoying Lu, <b>Yue Zhuo</b>, Christina Winter, Wenfeng Xu, Bo&nbsp;Li, and  Yingxiao Wang.  Bone Physiology, Biomaterial and the Effect of  Mechanical/Physical Microenvironment on MSC Osteogenesis: A  Tribute to Shu Chiens 80th Birthday.  <em>Cellular and Molecular Bioengineering</em>, 4(4):579--590, 2011. [&nbsp;<a href="publications_bib.html#Liao2011">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1007/s12195-011-0204-9">DOI</a>&nbsp;|  <a href="/website/docs/Liao2011.pdf">PDF</a>&nbsp;]  </p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org2b71350" class="outline-2">
+<h2 id="conference_publications">Conference publications</h2>
+<div class="outline-text-2" id="text-conference_publications">
+<ol class="org-ol">
+<li><p><a name="Zhuo2018a"></a>  <b>Yue Zhuo</b>, Ji&nbsp;Sun Choi, Thibault Marin, Hojeong Yu, Brendan&nbsp;A. Harley, and  Brian&nbsp;T. Cunningham.  Photonic Resonator Outcoupler Microscopy (PROM) for  Quantitative Monitoring of Stem Cell Focal Adhesion Area.  In <em>Frontiers in Optics</em>, page JTu3A.119. Optical Society of  America, 2018. [&nbsp;<a href="publications_bib.html#Zhuo2018a">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1364/FIO.2018.JTu3A.119">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2018a.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2018b"></a>  <b>Yue Zhuo</b>, Ji&nbsp;Sun Choi, Thibault Marin, Hojeong Yu, Brendan&nbsp;A. Harley, and  Brian&nbsp;T. Cunningham.  Stem Cell Adhesion Imaging with Photonic Resonator  Outcoupler Microscopy (PROM).  In <em>Biomedical Engineering Society Annual Meeting</em>,  2018. [&nbsp;<a href="publications_bib.html#Zhuo2018b">bib</a>&nbsp;|  <a href="/website/docs/Zhuo2018b.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2017b"></a>  <b>Yue Zhuo</b>, Ji&nbsp;Sun Choi, Thibault Marin, Hojeong Yu, Brendan&nbsp;A. Harley, and  Brian&nbsp;T. Cunningham.  Label-free Imaging of Stem Cell Adhesion and Dynamic  Tracking of Boundary Evolution Using Photonic Crystal Enhanced  Microscopy (PCEM).  In <em>Proceedings of Microscopy &amp; Microanalysis</em>,  volume&nbsp;23, pages 1142--1143, 2017. [&nbsp;<a href="publications_bib.html#Zhuo2017b">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1017/S1431927617006377">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2017b.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2017a"></a>  <b>Yue Zhuo</b>, Ji&nbsp;Sun Choi, Thibault Marin, Hojeong Yu, Brendan&nbsp;A. Harley, and  Brian&nbsp;T. Cunningham.  Quantitative Label-free Imaging of Live-cell Adhesion  Using Photonic Crystal Enhanced Microscopy (PCEM).  In <em>Conference on Lasers and Electro-Optics (CLEO)</em>,  2017. [&nbsp;<a href="publications_bib.html#Zhuo2017a">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1364/CLEO_SI.2017.SM1C.2">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2017a.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2017"></a>  <b>Yue Zhuo</b>, Ji&nbsp;Sun Choi, Thibault Marin, Hojeong Yu, Brendan&nbsp;A. Harley, and  Brian&nbsp;T. Cunningham.  Cell Adhesion Phenotype Library with Photonic Crystal  Enhanced Microscopy.  In <em>Optics in the Life Sciences Congress</em>, page BoS2A7,  2017. [&nbsp;<a href="publications_bib.html#Zhuo2017">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1364/BODA.2017.BoS2A.7">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2017.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2016b"></a>  <b>Yue Zhuo</b>, Ji&nbsp;Sun Choi, Thibault Marin, Hojeong Yu, Brendan&nbsp;A. Harley, and  Brian&nbsp;T. Cunningham.  Photonic Crystal Enhanced Microscopy (PCEM) for Multimode  Dynamic Quantitative Imaging of Cell Adhesion.  In <em>International Engineering in Medicine and Biology  Conference (EMBC)</em>, 2016. [&nbsp;<a href="publications_bib.html#Zhuo2016b">bib</a>&nbsp;|  <a href="/website/docs/Zhuo2016b.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Choi2016"></a>  Ji&nbsp;Sun Choi, Yelena Ilin, <b>Yue Zhuo</b>, Brian Cunningham, Mary Kraft, and Brendan  Harley.  Tracing of individual hematopoietic stem cell specification events  using Raman Spectroscopy and photonic crystal enhanced microscopy.  In <em>Frontiers in Bioengineering and Biotechnology</em>,  volume&nbsp;4, 2016. [&nbsp;<a href="publications_bib.html#Choi2016">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.3389/conf.FBIOE.2016.01.00701">DOI</a>&nbsp;|  <a href="/website/docs/Choi2016.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Choi2016a"></a>  Ji&nbsp;Sun Choi, Yelena Ilin, <b>Yue Zhuo</b>, Mary Kraft, Brian Cunningham, and Brendan  Harley.  In vitro control of hematopoietic stem cell fate decisions and  analysis in a bone marrow-inspired synthetic niche.  In <em>NIH-NIDDK Effects of Aging on Hematopoiesis  Workshop</em>, 2016. [&nbsp;<a href="publications_bib.html#Choi2016a">bib</a>&nbsp;|  <a href="/website/docs/Choi2016a.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Choi2015"></a>  Ji&nbsp;Sun Choi, Yelena Ilin, <b>Yue Zhuo</b>, Brian Cunningham, Mary Kraft, and Brendan  Harley.  Label-Free Analysis of Single Hematopoietic Stem and  Progenitor Cells.  In <em>Tissue Engineering Part A</em>, volume&nbsp;21, pages  S237--S238, 2015. [&nbsp;<a href="publications_bib.html#Choi2015">bib</a>&nbsp;|  <a href="/website/docs/Choi2015.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2015b"></a>  <b>Yue Zhuo</b>, Ji&nbsp;Sun Choi, Hojeong Yu, Brendan&nbsp;A. Harley, and Brian&nbsp;T. Cunningham.  Dynamic label-free imaging of live-cell adhesion using photonic  crystal enhanced microscopy (PCEM).  In <em>Conference on Lasers and Electro-Optics (CLEO)</em>,  2015 Conference on Lasers and Electro-Optics (CLEO), pages 1--2, 2015. [&nbsp;<a href="publications_bib.html#Zhuo2015b">bib</a>&nbsp;|  <a href="/website/docs/Zhuo2015b.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2015c"></a>  <b>Yue Zhuo</b>, Ji&nbsp;Sun Choi, Hojeong Yu, Brendan&nbsp;A. Harley, and Brian&nbsp;T. Cunningham.  Surface Attachment Profiling of Stem Cell Differentiation  Using Photonic Crystal Enhanced Microscopy (PCEM).  In <em>The American Society of Mechanical Engineers --  NanoEngineering for Medicine and Biology (ASME-NEMB)</em>, 2015. [&nbsp;<a href="publications_bib.html#Zhuo2015c">bib</a>&nbsp;|  <a href="/website/docs/Zhuo2015c.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Choi2014"></a>  Ji&nbsp;Sun Choi, Yelena Ilin, <b>Yue Zhuo</b>, Brian Cunningham, Mary Kraft, and Brendan  Harley.  Single-Cell Approaches to Assess Hematopoietic Stem  Cell Responses to Matrix Cues.  In <em>Biomedical Engineering Society Annual Meeting</em>,  2014. [&nbsp;<a href="publications_bib.html#Choi2014">bib</a>&nbsp;|  <a href="/website/docs/Choi2014.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2014a"></a>  <b>Yue Zhuo</b>, Limei Tian, Weili Chen, Hojeong Yu, Srikanth Singamaneni, and  Brian&nbsp;T. Cunningham.  Protein-protein binding detection with nanoparticle photonic  crystal enhanced microscopy (NP-PCEM).  In <em>36th Annual International Conference of the IEEE  Engineering in Medicine and Biology Society</em>, pages 2069--2072. IEEE,  2014. [&nbsp;<a href="publications_bib.html#Zhuo2014a">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1109/EMBC.2014.6944023">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2014a.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2014b"></a>  <b>Yue Zhuo</b>, Huan Hu, Weili Chen, Meng Lu, Limei Tian, Hojeong Yu, Kenneth&nbsp;D.  Long, Edmond Chow, William&nbsp;P. King, Srikanth Singamaneni, and Brian&nbsp;T.  Cunningham.  Detection of single nanoparticles using photonic crystal enhanced  microscopy.  In <em>2014 Conference on Lasers and Electro-Optics (CLEO)  -- Laser Science to Photonic Applications</em>, pages 1--2, 2014. [&nbsp;<a href="publications_bib.html#Zhuo2014b">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1364/CLEO_SI.2014.SM4P.6">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2014b.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2012"></a>  <b>Yue Zhuo</b>, Tongcheng Qian, Shaoying Lu, and Yingxiao Wang.  Src Activity Dynamic Detection In The Initiation Of  Tension-released Cell Migration.  In <em>BMES</em>, 2012. [&nbsp;<a href="publications_bib.html#Zhuo2012">bib</a>&nbsp;|  <a href="/website/docs/Zhuo2012.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Wu2011a"></a>  Xiao-Long Wu, Jiading Gai, Fan Lam, Maojing Fu, Justin&nbsp;P. Haldar, <b>Yue Zhuo</b>,  Zhi-pei Liang, Wen-Mei Hwu, and Bradley&nbsp;P. Sutton.  Impatient MRI: Illinois Massively Parallel Acceleration  Toolkit for image reconstruction with enhanced throughput in MRI.  In <em>2011 IEEE International Symposium on Biomedical  Imaging: From Nano to Macro</em>, pages 69--72, 2011. [&nbsp;<a href="publications_bib.html#Wu2011a">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1109/ISBI.2011.5872356">DOI</a>&nbsp;|  <a href="/website/docs/Wu2011a.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Wu2011b"></a>  Xiao-Long Wu, <b>Yue Zhuo</b>, Jiading Gai, Fan Lam, Maojing Fu, Justin&nbsp;P. Haldar,  Wen-Mei Hwu, Zhi-Pei Liang, and Bradley&nbsp;P. Sutton.  Advanced MRI reconstruction toolbox with accelerating on GPU.  In John&nbsp;D. Owens, I-Jong Lin, Yu-Jin Zhang, and Giordano&nbsp;B. Beretta,  editors, <em>Parallel Processing for Imaging Applications</em>, volume  7872, pages 241--250. Spie, 2011. [&nbsp;<a href="publications_bib.html#Wu2011b">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1117/12.872204">DOI</a>&nbsp;|  <a href="/website/docs/Wu2011b.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2010"></a>  Y.&nbsp;Zhuo, B.&nbsp;Sutton, X.&nbsp;Wu, J.&nbsp;Haldar, W.&nbsp;Hwu, Z.&nbsp;Liang, Y.&nbsp;Zhuo, H.&nbsp;Hu,  W.&nbsp;Chen, M.&nbsp;Lu, L.&nbsp;Tian, H.&nbsp;Yu, K.&nbsp;D. Long, E.&nbsp;Chow, W.&nbsp;P. King,  S.&nbsp;Singamaneni, and B.&nbsp;T. Cunningham.  Sparse regularization in MRI iterative reconstruction using  GPUs.  In <em>2010 3rd International Conference on Biomedical  Engineering and Informatics</em>, volume&nbsp;2, pages 578--582, 2010. [&nbsp;<a href="publications_bib.html#Zhuo2010">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1109/BMEI.2010.5640008">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2010.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2010a"></a>  <b>Yue Zhuo</b> and Bradley&nbsp;P. Sutton.  fMRI calibration using effective BOLD signals estimated from  susceptibility-induced echo-time-shift.  In <em>OHBM</em>, 2010. [&nbsp;<a href="publications_bib.html#Zhuo2010a">bib</a>&nbsp;|  <a href="/website/docs/Zhuo2010a.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2010b"></a>  <b>Yue Zhuo</b> and Bradley&nbsp;P. Sutton.  Susceptibility-induced BOLD Sensitivity Variation in Breath  Hold Task.  In <em>ISMRM</em>, 2010. [&nbsp;<a href="publications_bib.html#Zhuo2010b">bib</a>&nbsp;|  <a href="/website/docs/Zhuo2010b.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2010c"></a>  <b>Yue Zhuo</b>, Xiao-Long Wu, Justin&nbsp;P. Haldar, Wen-mei&nbsp;W. Hwu, Zhi-Pei Liang, and  Bradley&nbsp;P. Sutton.  Multi-GPU Implementation for Iterative MR Image  Reconstruction with Field Correction.  In <em>ISMRM</em>, 2010. [&nbsp;<a href="publications_bib.html#Zhuo2010c">bib</a>&nbsp;|  <a href="/website/docs/Zhuo2010c.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2010d"></a>  <b>Yue Zhuo</b>, Xiao-Long Wu, Justin&nbsp;P. Haldar, Wen-mei&nbsp;W. Hwu, Zhi-Pei Liang, and  Bradley&nbsp;P. Sutton.  Accelerating iterative field-compensated MR image reconstruction  on GPUs.  In <em>2010 IEEE International Symposium on Biomedical  Imaging: From Nano to Macro</em>, pages 820--823, 2010. [&nbsp;<a href="publications_bib.html#Zhuo2010d">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1109/ISBI.2010.5490112">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2010d.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2009"></a>  <b>Yue Zhuo</b> and Bradley&nbsp;P. Sutton.  Effect on BOLD sensitivity due to susceptibility-induced echo  time shift in spiral-in based functional MRI.  <em>IEEE Engineering in Medicine and Biology Society</em>,  2009:4449--4452, 2009. [&nbsp;<a href="publications_bib.html#Zhuo2009">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1109/IEMBS.2009.5333815">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2009.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2009a"></a>  <b>Yue Zhuo</b> and Bradley&nbsp;P. Sutton.  Iterative image reconstruction model including susceptibility  gradients combined with Z-shimming gradients in fMRI.  <em>IEEE Engineering in Medicine and Biology Society</em>,  2009:5721--5724, 2009. [&nbsp;<a href="publications_bib.html#Zhuo2009a">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1109/IEMBS.2009.5332669">DOI</a>&nbsp;|  <a href="/website/docs/Zhuo2009a.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Sutton2009"></a>  Bradley&nbsp;P. Sutton and <b>Yue Zhuo</b>.  Susceptibility, echo time shifts, and T2* considerations for  functional magnetic resonance imaging.  In <em>2009 IEEE International Symposium on Biomedical  Imaging: From Nano to Macro</em>, pages 710--713, 2009. [&nbsp;<a href="publications_bib.html#Sutton2009">bib</a>&nbsp;|  <a href="http://dx.doi.org/10.1109/ISBI.2009.5193146">DOI</a>&nbsp;|  <a href="/website/docs/Sutton2009.pdf">PDF</a>&nbsp;]  </p></li>
+<li><p><a name="Zhuo2008"></a>  <b>Yue Zhuo</b> and Bradley&nbsp;P. Sutton.  Iterative, Field-inhomogeneity Compensated Image  Reconstruction for MRI with Z-shim Gradient.  In <em>2008 Conference: Biomedical Engineering Society  (BMES)</em>, 2008. [&nbsp;<a href="publications_bib.html#Zhuo2008">bib</a>&nbsp;|  <a href="/website/docs/Zhuo2008.pdf">PDF</a>&nbsp;]  </p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org005de0e" class="outline-2">
+<h2 id="released_code">Released code</h2>
+<div class="outline-text-2" id="text-released_code">
+<ol class="org-ol">
+<li>"GPU accelerated MRI reconstruction including magnetic field inhomogeneity and gradients", IMPATIENT MRI toolset, Xiao-Long Wu, Yue Zhuo (April, 2010). <a href="http://impact.crhc.illinois.edu/mri/mri.aspx">http://impact.crhc.illinois.edu/mri/mri.aspx</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<!-- <div class='footer'> -->
+<!--   Last updated 2020-01-17 Fri 01:11. (Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="https://orgmode.org">Org</a> mode 9.3.1)) -->
+<!-- </div> -->
+</div>
+</body>
+</html>

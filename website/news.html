@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2020-01-26 Sun 17:15 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Yue Zhuo">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/website/css/site.css" type="text/css"/>
+
+<link rel="alternate" type="application/rss+xml" href="/website/rss.xml"
+	  title="RSS feed">
+<script type="text/javascript" src="js/menu_highlight.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<div class="topnav">
+  <ul>
+    <li><a href='/website/index.html'>Home</a></li>
+    <li><a href='/website/research.html'>Research</a></li>
+    <li><a href='/website/bio.html'>Bio</a></li>
+    <li><a href='/website/publications.html'>Publications</a></li>
+    <li><a href='/website/news.html'>News</a></li>
+  </ul>
+</div>
+</div>
+<div id="content">
+<h1 class="title">News</h1>
+
+<div id="outline-container-orgb4efe67" class="outline-2">
+<h2 id="orgb4efe67">2019</h2>
+<div class="outline-text-2" id="text-orgb4efe67">
+</div>
+<div id="outline-container-org85f04bf" class="outline-3">
+<h3 id="org85f04bf"><span class="timestamp-wrapper"><span class="timestamp">01 Apr 2019</span></span> - Checking In with Photomedicine</h3>
+<div class="outline-text-3" id="text-org85f04bf">
+<ul class="org-ul">
+<li><a href="https://www.osa-opn.org/home/articles/volume_30/april_2019/departments/checking_in_with_photomedicine/">Optics &amp; Photonics News | OSA</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf24a0e5" class="outline-3">
+<h3 id="orgf24a0e5"><span class="timestamp-wrapper"><span class="timestamp">03 Apr 2019</span></span> - Profile in Optics &amp; Photonics News</h3>
+<div class="outline-text-3" id="text-orgf24a0e5">
+<blockquote class="twitter-tweet" data-lang="en">
+  <p lang="en" dir="ltr">Congrats to Nano Sensor Group alumni Yue Zhuo for being profiled in Optics &amp; Photonics News! Check out the story:
+    <a href="https://t.co/zmeFa0RVRs">https://t.co/zmeFa0RVRs
+    </a>
+  </p>&mdash; Brian Cunningham (@brian_bcunning)
+  <a href="https://twitter.com/brian_bcunning/status/1113416649514811394?ref_src=twsrc%5Etfw">April 3, 2019
+  </a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+</script>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0160e35" class="outline-2">
+<h2 id="org0160e35">2018</h2>
+<div class="outline-text-2" id="text-org0160e35">
+</div>
+<div id="outline-container-orgd5fa9de" class="outline-3">
+<h3 id="orgd5fa9de"><span class="timestamp-wrapper"><span class="timestamp">12 Nov 2018</span></span> - OSA Stories</h3>
+<div class="outline-text-3" id="text-orgd5fa9de">
+<p>
+<table> <tr> <td style="width:100px;"> <a href="https://www.osa.org/en-us/media_library/searchresultsvideo/?Id=5860130287001"> <img src="images/Yue_OSA_01.jpg" alt="Yue_OSA_01" /> </a> </td> <td style="width:100%;"> <a href="https://www.osa.org/en-us/media_library/searchresultsvideo/?Id=5860130287001">Yue Zhuo talks her work in imaging--OSA Stories | The Optical Society (OSA)</a> </td> </tr></table>
+</p>
+
+<p>
+<table> <tr> <td style="width:100px;"> <a href="https://www.osa.org/en-us/media_library/searchresultsvideo/?Id=5860128024001"> <img src="images/Yue_OSA_02.jpg" alt="Yue_OSA_02" /> </a> </td> <td style="width:100%;"> <a href="https://www.osa.org/en-us/media_library/searchresultsvideo/?Id=5860128024001">Yue Zhuo shares how she became interested in optics--OSA Stores | The Optical Society (OSA)</a> </td> </tr></table>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a8385e" class="outline-3">
+<h3 id="org5a8385e"><span class="timestamp-wrapper"><span class="timestamp">26 Oct 2018</span></span> - Inaugural T.F. Deutch Fellowship</h3>
+<div class="outline-text-3" id="text-org5a8385e">
+<blockquote class="twitter-tweet" data-lang="en">
+  <p lang="en" dir="ltr">Congratulations to Yue Zhuo for being selected as the inaugural T.F. Deutch Fellow in Biomedical Optics at Massachusetts General Hospital:
+    <a href="https://t.co/EIQkxN2OrJ">https://t.co/EIQkxN2OrJ
+    </a>
+    <br>
+    <br>Best wishes to Yue as she moved to Boston for the next exciting stage of her career!
+  </p>&mdash; Brian Cunningham (@brian_bcunning)
+  <a href="https://twitter.com/brian_bcunning/status/1055895001350201344?ref_src=twsrc%5Etfw">October 26, 2018
+  </a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+</script>
+</div>
+</div>
+
+<div id="outline-container-org2581f0e" class="outline-3">
+<h3 id="org2581f0e"><span class="timestamp-wrapper"><span class="timestamp">15 Oct 2018</span></span> - Thomas F. Deutsch Fellowship Winner Yue Zhuo</h3>
+<div class="outline-text-3" id="text-org2581f0e">
+<ul class="org-ul">
+<li><a href="https://www.osa.org/en-us/fellowships/">The Optical Society (OSA)</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb6ed6bc" class="outline-3">
+<h3 id="orgb6ed6bc"><span class="timestamp-wrapper"><span class="timestamp">15 Oct 2018</span></span> - Postdoc Yue Zhuo Receives Inaugural Thomas F. Deutsch Fellowship in Biomedical Optics</h3>
+<div class="outline-text-3" id="text-orgb6ed6bc">
+<ul class="org-ul">
+<li><a href="https://mntl.illinois.edu/news/article/27698">Micro and Nanotechnology Laboratory - Illinois</a></li>
+<li><a href="https://emails.illinois.edu/newsletter/189177.html#element_1044156">News | UIUC</a></li>
+</ul>
+
+
+<div class="figure">
+<p><a href="https://mntl.illinois.edu/news/article/27698" width="30%" style="float:left; margin-bottom:20px;"><img src="images/Yue_OSA_Fellowship.jpg" alt="Yue_OSA_Fellowship.jpg" width="30%" style="float:left; margin-bottom:20px;"></a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4d7a6c0" class="outline-3">
+<h3 id="org4d7a6c0"><span class="timestamp-wrapper"><span class="timestamp">03 Oct 2018</span></span> - Zhuo to Receive Inaugural Fellowship in Biomedical Optics at MGH</h3>
+<div class="outline-text-3" id="text-org4d7a6c0">
+<ul class="org-ul">
+<li><a href="https://beckman.illinois.edu/news/2018/10/yue-zhuo-new-fellowship">Beckman Institute | UIUC</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc102f92" class="outline-3">
+<h3 id="orgc102f92"><span class="timestamp-wrapper"><span class="timestamp">04 Oct 2018</span></span> - Alumna Zhuo receives prestigious fellowship in biomedical optics</h3>
+<div class="outline-text-3" id="text-orgc102f92">
+<ul class="org-ul">
+<li><a href="https://bioengineering.illinois.edu/news/article/27605">Bioengineering | UIUC</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9a520ef" class="outline-3">
+<h3 id="org9a520ef"><span class="timestamp-wrapper"><span class="timestamp">17 Sep 2018</span></span> - Inaugural Thomas F. Deutsch Fellow</h3>
+<div class="outline-text-3" id="text-org9a520ef">
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The <a href="https://twitter.com/hashtag/OSAFoundation?src=hash&amp;ref_src=twsrc%5Etfw">#OSAFoundation</a> &amp; The Wellman Center for Photomedicine (WCP) at <a href="https://twitter.com/MassGeneralNews?ref_src=twsrc%5Etfw">@MassGeneralNews</a> are pleased to announce Yue Zhuo, Univ. of Illinois at Urbana-Champaign, <a href="https://twitter.com/Illinois_Alma?ref_src=twsrc%5Etfw">@Illinois_Alma</a> the inaugural Thomas F. Deutsch Fellow in <a href="https://twitter.com/hashtag/Biomedical?src=hash&amp;ref_src=twsrc%5Etfw">#Biomedical</a> <a href="https://twitter.com/hashtag/Optics?src=hash&amp;ref_src=twsrc%5Etfw">#Optics</a>. <a href="https://twitter.com/hashtag/Imaging?src=hash&amp;ref_src=twsrc%5Etfw">#Imaging</a> <a href="https://twitter.com/hashtag/FIO18?src=hash&amp;ref_src=twsrc%5Etfw">#FIO18</a> Awards <a href="https://t.co/Lv6gw7oCvu">pic.twitter.com/Lv6gw7oCvu</a></p>&mdash; The Optical Society (@OpticalSociety) <a href="https://twitter.com/OpticalSociety/status/1041834314164523008?ref_src=twsrc%5Etfw">September 17, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+
+<div id="outline-container-org581ebf9" class="outline-3">
+<h3 id="org581ebf9"><span class="timestamp-wrapper"><span class="timestamp">08 Jun 2018</span></span> - Photonic Resonator Outcoupler Microscopy: New Tool for Live Imaging of Cell Focal Adhesions</h3>
+<div class="outline-text-3" id="text-org581ebf9">
+<ul class="org-ul">
+<li><a href="https://nano.ece.illinois.edu/2018/06/08/photonic-resonator-outcoupler-microscopy-new-tool-for-live-imaging-of-cell-focal-adhesions/">Nanosensors Group | UIUC</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge09f146" class="outline-3">
+<h3 id="orge09f146"><span class="timestamp-wrapper"><span class="timestamp">06 Jun 2018</span></span> - Label-Free Microscopy Analyzes Dynamics of Cell Membranes</h3>
+<div class="outline-text-3" id="text-orge09f146">
+<ul class="org-ul">
+<li><a href="https://www.photonics.com/Articles/Label-Free_Microscopy_Analyzes_Dynamics_of_Cell/p6/v159/i1035/a63520">Photonics</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org66b5afb" class="outline-3">
+<h3 id="org66b5afb"><span class="timestamp-wrapper"><span class="timestamp">04 Jun 2018</span></span> - PROM microscopy analyses cellular focal adhesion dynamics</h3>
+<div class="outline-text-3" id="text-org66b5afb">
+<ul class="org-ul">
+<li><a href="https://cancer.illinois.edu/news-prom-microscopy-analyses-cellular-focal-adhesion-dynamics">Cancer Center at Illinois</a></li>
+<li><a href="https://www.europeanpharmaceuticalreview.com/news/76164/prom-microscopy-cellular-adhesion/">European Pharmaceutical Review</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdb8d793" class="outline-3">
+<h3 id="orgdb8d793"><span class="timestamp-wrapper"><span class="timestamp">01 Jun 2018</span></span> - Researchers Develop Microscopy Technique to Analyze Cellular Focal Adhesion Dynamics</h3>
+<div class="outline-text-3" id="text-orgdb8d793">
+<blockquote class="twitter-tweet" data-lang="en">
+  <p lang="en" dir="ltr">
+
+	New paper in Light Science &amp; Applications!  Photonic resonator
+	outcoupler microscopy for live imaging of cell focal adhesions:
+
+	<a href="https://t.co/rsBGevga9i">https://t.co/rsBGevga9i</a>
+  </p>
+  &mdash; Brian Cunningham (@brian_bcunning)
+  <a href="https://twitter.com/brian_bcunning/status/1005208528804556808?ref_src=twsrc%5Etfw">
+	June 8, 2018
+  </a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<ul class="org-ul">
+<li><a href="https://beckman.illinois.edu/news/2018/06/zhuo-yue">Beckman Institute | UIUC</a></li>
+</ul>
+<p>
+By Maeve Reilly. Published on June 01, 2018
+</p>
+
+<p>
+Focal adhesions are large specialized proteins that are located in the area
+where a cell membrane meets the extracellular matrix (ECM), a collection of
+molecules surrounding the cells that provide support and regulate
+micromechanical signals to the cells. Examining focal adhesions is one of the
+key elements to understanding how a cell proliferates, differentiates, and
+migrates—which can help in the treatment of diseases like cancer.  Researchers
+at the Beckman Institute for Advanced Science and Technology and the Micro and
+Nanotechnology Laboratory at the University of Illinois have developed a new
+form of microscopy that allows them to observe the formation and evolution of
+cell membrane focal adhesions. Their paper in Light: Science &amp; Applications,
+“Quantitative Analysis of Focal Adhesion Dynamics Using Photonic Resonator
+Outcoupler Microscopy (PROM),” details how the new live cell imaging technique
+can observe the formation and evolution of cell membrane focal adhesions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org72670bf" class="outline-3">
+<h3 id="org72670bf"><span class="timestamp-wrapper"><span class="timestamp">01 Jun 2018</span></span> - Novel microscopy technique developed to analyze cellular focal adhesion dynamics</h3>
+<div class="outline-text-3" id="text-org72670bf">
+<ul class="org-ul">
+<li><a href="https://www.nsf.gov/news/news_summ.jsp?cntn_id=245693&amp;org=NSF&amp;from=news">NSF</a></li>
+<li><a href="https://www.nibib.nih.gov/news-events/newsroom/novel-microscopy-technique-developed-analyze-cellular-focal-adhesion-dynamics">National Institute of Biomedical Imaging and Bioengineering (NIBIB) | NIH</a></li>
+<li><a href="https://www.techsite.io/p/839986/fb_ref=1538371392">Techsite</a></li>
+<li><a href="https://www.eurekalert.org/pub_releases/2018-06/bifa-nmt060118.php">Eurekalert</a></li>
+<li><a href="https://www.sciencedaily.com/releases/2018/06/180601134723.htm">ScienceDaily</a></li>
+<li><a href="https://phys.org/news/2018-06-microscopy-technique-cellular-focal-adhesion.html">Phys</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org50d32af" class="outline-3">
+<h3 id="org50d32af"><span class="timestamp-wrapper"><span class="timestamp">01 Jun 2018</span></span> - Cellular Focal Adhesion Dynamics Analyzed: Novel Microscopy Technique</h3>
+<div class="outline-text-3" id="text-org50d32af">
+<ul class="org-ul">
+<li><a href="https://sciencebeta.com/cellular-adhesion-prom/">Sciencebeta</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1aee4d2" class="outline-2">
+<h2 id="org1aee4d2">2017</h2>
+<div class="outline-text-2" id="text-org1aee4d2">
+</div>
+<div id="outline-container-org7589f44" class="outline-3">
+<h3 id="org7589f44"><span class="timestamp-wrapper"><span class="timestamp">05 Oct 2017</span></span> - Alumna Zhuo Receives Postdoctoral Scholar Award</h3>
+<div class="outline-text-3" id="text-org7589f44">
+<ul class="org-ul">
+<li><a href="https://mntl.illinois.edu/news/article/23733">Micro and Nanotechnology Laboratory - Illinois</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org31166f0" class="outline-3">
+<h3 id="org31166f0"><span class="timestamp-wrapper"><span class="timestamp">15 Sep 2017</span></span> - Alumna Zhuo earns scholar award for PCEM-related paper</h3>
+<div class="outline-text-3" id="text-org31166f0">
+<ul class="org-ul">
+<li><a href="https://nano.ece.illinois.edu/2017/09/15/liu-earns-grant-to-improve-integrated-circuits/">Nanosensors Group | UIUC</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgad8236f" class="outline-3">
+<h3 id="orgad8236f"><span class="timestamp-wrapper"><span class="timestamp">26 Jul 2017</span></span> - 2017 M&amp;M Postdoctoral Students Awards &amp; Scholarships</h3>
+<div class="outline-text-3" id="text-orgad8236f">
+<ul class="org-ul">
+<li><a href="https://microscopy.org/awards/2017_postdoctoralscholars.cfm">Microscopy</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2301185" class="outline-3">
+<h3 id="org2301185"><span class="timestamp-wrapper"><span class="timestamp">10 May 2017</span></span> - Beckman Institute researcher awarded Postdoctoral Scholar Award</h3>
+<div class="outline-text-3" id="text-org2301185">
+<ul class="org-ul">
+<li><a href="https://news.illinois.edu/view/6367/499382">News | UIUC</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org28d869a" class="outline-3">
+<h3 id="org28d869a"><span class="timestamp-wrapper"><span class="timestamp">08 Mar 2017</span></span> - Enter the matrix</h3>
+<div class="outline-text-3" id="text-org28d869a">
+<ul class="org-ul">
+<li><a href="https://www.biotechniques.com/cell-and-development-biology/enter-the-matrix/">Biotechniques</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6b63dcd" class="outline-3">
+<h3 id="org6b63dcd"><span class="timestamp-wrapper"><span class="timestamp">30 Jan 2017</span></span> - Researchers explore essential cell behavior with crystal sensor</h3>
+<div class="outline-text-3" id="text-org6b63dcd">
+<ul class="org-ul">
+<li><a href="https://www.nibib.nih.gov/news-events/newsroom/researchers-explore-essential-cell-behavior-crystal-sensor">National Institute of Biomedical Imaging and Bioengineering (NIBIB) | NIH</a></li>
+<li><a href="https://www.sciencedaily.com/releases/2017/01/170131124415.htm">Sciencedaily</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc3bc36d" class="outline-2">
+<h2 id="orgc3bc36d">2016</h2>
+<div class="outline-text-2" id="text-orgc3bc36d">
+</div>
+<div id="outline-container-orgdc2e3fe" class="outline-3">
+<h3 id="orgdc2e3fe"><span class="timestamp-wrapper"><span class="timestamp">21 Dec 2016</span></span> - Illinois Researchers Unveil Powerful New Microscope</h3>
+<div class="outline-text-3" id="text-orgdc2e3fe">
+<ul class="org-ul">
+<li><a href="https://phys.org/news/2016-12-photonic-crystal-microscope-wound-cancer.html">Phys</a></li>
+<li><a href="https://advancedtissue.com/2016/12/illinois-researchers-unveil-powerful-new-microscope/">AdvancedTissue</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0e4c47b" class="outline-3">
+<h3 id="org0e4c47b"><span class="timestamp-wrapper"><span class="timestamp">19 Dec 2016</span></span> - Biosensor-Based Microscope Measures Cell Interactions Quantitatively Over Time</h3>
+<div class="outline-text-3" id="text-org0e4c47b">
+<ul class="org-ul">
+<li><a href="https://www.photonics.com/Articles/Biosensor-Based_Microscope_Measures_Cell/a61460">Photonics</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3c37004" class="outline-3">
+<h3 id="org3c37004"><span class="timestamp-wrapper"><span class="timestamp">07 Dec 2016</span></span> - Novel label-free microscope enables dynamic, high-resolution imaging of cell interactions</h3>
+<div class="outline-text-3" id="text-org3c37004">
+<ul class="org-ul">
+<li><a href="https://mntl.illinois.edu/news/article/19536">Micro and Nanotechnology Laboratory - Illinois</a></li>
+<li><a href="https://www.nsf.gov/news/news_summ.jsp?cntn_id=190633">NSF</a></li>
+<li><a href="https://www.nibib.nih.gov/news-events/newsroom/novel-label-free-microscopy-enables-dynamic-high-resolution-imaging-cell">National Institute of Biomedical Imaging and Bioengineering (NIBIB) | NIH</a></li>
+<li><a href="https://www.analytica-world.com/en/news/160933/novel-label-free-microscopy-enables-dynamic-high-resolution-imaging-of-cell-interactions.html">Analytica-World</a></li>
+<li><a href="https://www.sciencedaily.com/releases/2016/12/161207133643.htm">ScienceDaily</a></li>
+<li><a href="https://scienceblog.com/490497/novel-label-free-microscopy-enables-dynamic-high-resolution-imaging-of-cell-interactions/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+scienceblogrssfeed+%28ScienceBlog.com%29">ScienceBlog</a></li>
+<li><a href="https://www.longroom.com/discussion/226928/novel-label-free-microscopy-enables-dynamic-high-resolution-imaging-of-cell-interactions">Longroom</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5f863f8" class="outline-3">
+<h3 id="org5f863f8"><span class="timestamp-wrapper"><span class="timestamp">07 Dec 2016</span></span> - Photonic crystal enhanced microscope sheds light on wound healing and cancer metastasis</h3>
+<div class="outline-text-3" id="text-org5f863f8">
+<ul class="org-ul">
+<li><a href="https://phys.org/news/2016-12-photonic-crystal-microscope-wound-cancer.html">Phys</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdac6211" class="outline-3">
+<h3 id="orgdac6211"><span class="timestamp-wrapper"><span class="timestamp">07 Dec 2016</span></span> - Story label-free microscopy enables dynamic, high-resolution imaging of cellular interactions</h3>
+<div class="outline-text-3" id="text-orgdac6211">
+<ul class="org-ul">
+<li><a href="https://stemcellsdaily.com/novel-label-free-microscopy-enables-dynamic-high-resolution-imaging-of-cell-interactions/">StemCellsDaily</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org01e8547" class="outline-3">
+<h3 id="org01e8547"><span class="timestamp-wrapper"><span class="timestamp">05 May 2016</span></span> - Yue Zhuo wins CNST Nanotechnology Workshop 2016 Poster Winners</h3>
+<div class="outline-text-3" id="text-org01e8547">
+<ul class="org-ul">
+<li><a href="http://nano.illinois.edu/nanoworkshop2016/posters.html">CNST Nanotechnology Workshop 2016</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga137f8a" class="outline-3">
+<h3 id="orga137f8a"><span class="timestamp-wrapper"><span class="timestamp">29 Feb 2016</span></span> - 2016 Beckman Institute Postdoctoral Fellows Announced</h3>
+<div class="outline-text-3" id="text-orga137f8a">
+<ul class="org-ul">
+<li><a href="https://beckman.illinois.edu/news/2016/02/2016-postdoc-fellows">News | Beckman Institute | UIUC</a></li>
+<li><a href="https://beckman.illinois.edu/research/fellows-and-awards/postdoctoral/alumni">Beckman Institute | UIUC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Beckman_Fellow">wiki|Beckman Institute | UIUC</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfc1ffe8" class="outline-2">
+<h2 id="orgfc1ffe8">2015</h2>
+<div class="outline-text-2" id="text-orgfc1ffe8">
+</div>
+<div id="outline-container-org2dafc48" class="outline-3">
+<h3 id="org2dafc48"><span class="timestamp-wrapper"><span class="timestamp">28 Jul 2015</span></span> - Yue Zhuo wins 1st place Poster Award in Nanotechnology Workshop</h3>
+<div class="outline-text-3" id="text-org2dafc48">
+<ul class="org-ul">
+<li><a href="https://mntl.illinois.edu/news/article/11531">Micro and Nanotechnology Laboratory - Illinois</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1717d8d" class="outline-3">
+<h3 id="org1717d8d"><span class="timestamp-wrapper"><span class="timestamp">07 May 2015</span></span> - Yue Zhuo wins CNST Nanotechnology Workshop 2015 Poster Winners</h3>
+<div class="outline-text-3" id="text-org1717d8d">
+<ul class="org-ul">
+<li><a href="http://nano.illinois.edu/nanoworkshop2015/posters.html">CNST Nanotechnology Workshop 2015</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfcbe451" class="outline-2">
+<h2 id="orgfcbe451">2014</h2>
+<div class="outline-text-2" id="text-orgfcbe451">
+</div>
+<div id="outline-container-orgd004347" class="outline-3">
+<h3 id="orgd004347"><span class="timestamp-wrapper"><span class="timestamp">13 Jun 2014</span></span> - Detection of Single Nanoparticles Using Photonic Crystal Enhanced Microscopy</h3>
+<div class="outline-text-3" id="text-orgd004347">
+<ul class="org-ul">
+<li><a href="https://www.osapublishing.org/abstract.cfm?uri=cleo_si-2014-SM4P.6">OSAPublishing</a> (Presentation Video)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<!-- <div class='footer'> -->
+<!--   Last updated 2020-01-25 Sat 20:04. (Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="https://orgmode.org">Org</a> mode 9.3.1)) -->
+<!-- </div> -->
+</div>
+</body>
+</html>

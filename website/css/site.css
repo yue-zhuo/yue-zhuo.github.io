@@ -1,0 +1,385 @@
+/** CSS variables
+ */
+
+:root {
+    /* Body */
+    /* ---- */
+    --body-bg: white;
+    --content-padding: 10px;
+    --content-bg: transparent;
+    --content-box-shadow: 0;
+    --body-margin: 30px; /* not used for small screens */
+
+    /* Table of contents */
+    /* ----------------- */
+
+    /* Basic style */
+    --toc-bg: white;
+    --toc-box-shadow: none;
+    --toc-border-radius: 0px;
+    --toc-li-color: black;
+    --toc-hover-bg-color: #555;
+    --toc-hover-color: white;
+
+    /* Layout */
+    --toc-nav-vspacing: 20px;
+    --toc-base-padding: 5px;
+    --toc-ul-padding-left: 20px;
+    --toc-local-padding: 5px;
+    --toc-extra-padding-x: 4px;
+
+    /* Navigation bar */
+    /* -------------- */
+
+    /* Basic style */
+    --nav-bg: white;
+    --nav-hover: inherit;
+
+    /* RSS */
+    /* --- */
+    --rss-img: url("<<webroot>/images/feed-icon-28x28.png");
+
+    /* Tables */
+    /* ------ */
+    --tbl-border-color: black;
+    --tbl-border-size: 1px;
+
+    /* Org-js */
+    /* ------ */
+    --org-js-console-bg: white;
+
+    /* Fonts */
+    /* ----- */
+
+    /* Text */
+    --font-body-family: Arial, sans-serif;
+    --font-line-height: 140%;
+    --text-align: left;
+
+    /* Navigation bar */
+    --font-nav: black;
+
+    /* Code */
+    --font-code-family: DejaVu, Lucida Console, monospace;
+    --font-code-color: #4E4E4F;
+    --font-timestamp-color: #4E4E4F;
+    --font-code-size: 11pt;
+    --font-src-family: DejaVu, Lucida Console, monospace;
+    --font-example-family: DejaVu, Lucida Console, monospace;
+    --font-example-size: 11pt;
+
+    /* Links */
+    --font-a-color: navy;
+    --font-a-coderef-color: #7082BC;
+
+    /* Color scheme */
+    /* ------------ */
+
+    /* Source blocks */
+    --src-bg: #fBF9E7;
+    --lua-bg: var(--src-bg);
+
+}
+
+/** Responsive variables
+ */
+
+/* Large screens */
+@media (min-width: 1024px) {
+    :root {
+        --body-width: 1024px;
+        --nav-base-font-size: 100%;
+        --nav-height: 50px;
+        --nav-padding: 14px 16px;
+        --toc-base-font-size: 70%;
+        --toc-ul-font-size: 150%;
+        --toc-ul-local-font-size: 130%;
+        --toc-ul-2-font-size: 80%;
+        --toc-ul-3-font-size: 80%;
+        --font-src-size: 11pt;
+        --rss-padding: 0 0 0 25px;
+        --rss-size: 25px 25px;
+        --rss-pos: 50%;
+        --font-body-size: 14pt;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 600px) and (max-width: 1024px) {
+    :root {
+        --body-width: 768px;
+        --nav-base-font-size: 90%;
+        --nav-height: 30px;
+        --nav-padding: 5px 6px;
+        --toc-base-font-size: 70%;
+        --toc-ul-font-size: 130%;
+        --toc-ul-local-font-size: 130%;
+        --toc-ul-2-font-size: 80%;
+        --font-src-size: 11pt;
+        --rss-padding: 0 0 19px 9px;
+        --rss-size: 10px 10px;
+        --rss-pos: 25%;
+        --font-body-size: 14pt;
+    }
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+    :root {
+        --body-width: 95%;
+        --nav-base-font-size: 90%;
+        --nav-height: 30px;
+        --nav-padding: 5px 6px;
+        --toc-base-font-size: 80%;
+        --toc-ul-font-size: 120%;
+        --toc-ul-local-font-size: 130%;
+        --toc-ul-2-font-size: 80%;
+        --font-src-size: 10pt;
+        --rss-padding: 0 0 19px 20px;
+        --rss-size: 20px 20px;
+        --rss-pos: 19%;
+        --font-body-size: 16pt;
+    }
+}
+
+/** Navigation bar
+ */
+
+.topnav {
+    top: 0;
+    width: var(--body-width);
+    margin: 0 auto;
+    max-height: var(--nav-height);
+    height: var(--nav-height);
+    vertical-align: middle;
+    text-align: center;
+    background-color: var(--nav-bg);
+    font-size: var(--nav-base-font-size);
+    position: fixed;
+}
+
+/* RSS icon */
+.feed {
+    margin-left: 3px;
+    padding: var(--rss-padding);
+    background: var(--rss-img) no-repeat 0 var(--rss-pos);
+    background-size: var(--rss-size);
+}
+
+@media screen and (min-width: 600px) {
+    .topnav {
+        border-bottom: 1px solid;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav {
+        position: static;
+        left: 0;
+    }
+}
+
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    height: auto;
+}
+
+.topnav li {
+    float: left;
+    vertical-align: middle;
+    position: relative;
+}
+
+.topnav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: var(--nav-padding);
+    text-decoration: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+.topnav li a:hover:not(.active) {
+    background-color: var(--nav-hover);
+    text-decoration: underline;
+}
+
+.topnav li.current {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.topnav .right {
+    float: right;
+}
+
+.org-info-js_header-navigation {
+    visibility: hidden;
+}
+
+/** Table of content
+ */
+
+/* Basic styling (color, font, shadow) common to global and local TOC */
+#table-of-contents, .org-info-js_local-toc {
+    background-color: var(--toc-bg);
+    box-shadow: var(--toc-box-shadow);
+    border-bottom-left-radius: var(--toc-border-radius);
+    font-size: var(--toc-base-font-size);
+}
+
+/* Size (global TOC only) */
+#table-of-contents {
+    width: var(--side-width);
+}
+
+.org-info-js_local-toc {
+    padding: var(--toc-local-padding);
+}
+
+/* Fixed vertical table of content */
+@media screen and (min-width: 600px) {
+    #table-of-contents {
+        position: fixed;
+        left: 0;
+        top: calc(var(--nav-height) + var(--toc-nav-vspacing));
+        bottom: var(--toc-nav-vspacing);
+        padding: var(--toc-base-padding);
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #table-of-contents > div > ul > li > ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #table-of-contents {
+        position: relative;
+        width: 90%;
+        margin: auto;
+    }
+}
+
+#table-of-contents ul, .org-info-js_local-toc ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: var(--toc-ul-padding-left);
+}
+
+#table-of-contents ul {
+    font-size: var(--toc-ul-font-size);
+}
+
+.org-info-js_local-toc ul {
+    font-size: var(--toc-ul-local-font-size);
+}
+
+#table-of-contents > div > ul, .org-info-js_local-toc > div > ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: var(--toc-extra-padding-x);
+}
+
+#table-of-contents > div > ul > li > ul{
+    font-size: var(--toc-ul-2-font-size);
+    vertical-align: middle;
+}
+
+#table-of-contents > div > ul > li > ul > li > ul{
+    font-size: var(--toc-ul-3-font-size);
+    vertical-align: middle;
+}
+
+#table-of-contents li a, .org-info-js_local-toc li a {
+    display: block;
+    color: var(--toc-li-color);
+    text-decoration: none;
+}
+
+#table-of-contents li a {
+    vertical-align: middle;
+}
+
+#table-of-contents li a:hover:not(.active), .org-info-js_local-toc li a:hover:not(.active) {
+    background-color: var(--toc-hover-bg-color);
+    color: var(--toc-hover-color);
+}
+
+#org-info-js_console-container{
+  visibility: hidden;
+}
+
+table td {
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+table td img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+
+table td img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.parallax {
+    /* Set a specific height */
+    height: 300px;
+
+    /* /\* Create the parallax scrolling effect *\/ */
+    /* background-attachment: fixed; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+
+/* Body */
+body {
+    width: var(--body-width);
+    margin: 0 auto;
+    overflow-x: hidden;
+    background-color: var(--body-bg);
+    margin-top: var(--nav-height);
+    text-align: var(--text-align);
+    font-family: var(--font-body-family);
+    font-size: var(--font-body-size);
+    line-height: var(--font-line-height);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+
+h1 {
+    margin-top: 80px;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+@media (min-width: 600px) {
+    body {
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+    }
+}
+
+.timestamp {
+    color: var(--font-timestamp-color);
+}
