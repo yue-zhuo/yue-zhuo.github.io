@@ -3,7 +3,155 @@
 </pre>
 
 <pre>
-@comment{{Command line: bib2bib publications_orig.bib --remove language --remove optlocation --remove optnote -ob publications.bib}}
+@comment{{Command line: bib2bib --remove language --remove optlocation --remove optnote -ob publications.bib publications_orig.bib}}
+</pre>
+
+<a name="Tang2021"></a><pre>
+@article{<a href="publications.html#Tang2021">Tang2021</a>,
+  author = {Tang, Shui-Jing
+and Dannenberg, Paul H.
+and Liapis, Andreas C.
+and Martino, Nicola
+and Zhuo, Yue
+and Xiao, Yun-Feng
+and Yun, Seok-Hyun},
+  title = {{L}aser particles with omnidirectional emission for cell tracking},
+  journal = {Light, Science {\&} Applications},
+  year = {2021},
+  volume = {10},
+  number = {1},
+  pages = {23},
+  abstract = {The ability to track individual cells in space over time is crucial to analyzing heterogeneous cell populations. Recently, microlaser particles have emerged as unique optical probes for massively multiplexed single-cell tagging. However, the microlaser far-field emission is inherently direction-dependent, which causes strong intensity fluctuations when the orientation of the particle varies randomly inside cells. Here, we demonstrate a general solution based on the incorporation of nanoscale light scatterers into microlasers. Two schemes are developed by introducing either boundary defects or a scattering layer into microdisk lasers. The resulting laser output is omnidirectional, with the minimum-to-maximum ratio of the angle-dependent intensity improving from 0.007 (-24 dB) to > 0.23 (-6 dB). After transfer into live cells in vitro, the omnidirectional laser particles within moving cells could be tracked continuously with high signal-to-noise ratios for 2 h, while conventional microlasers exhibited frequent signal loss causing tracking failure.},
+  issn = {2047-7538},
+  doi = {10.1038/s41377-021-00466-0},
+  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/33495436">http://www.ncbi.nlm.nih.gov/pubmed/33495436</a>},
+  opturl = {https://doi.org/10.1038/s41377-021-00466-0},
+  file = {docs/Tang2021.pdf}
+}
+</pre>
+
+<a name="Lu2021"></a><pre>
+@inproceedings{<a href="publications.html#Lu2021">Lu2021</a>,
+  author = {Lu, Tianjian
+and Marin, Thibault
+and Zhuo, Yue
+and Chen, Yi-Fan
+and Ma, Chao},
+  title = {{N}onuniform {F}ast {F}ourier {T}ransform on {TPU}s},
+  booktitle = {{IEEE} {I}nternational {S}ymposium on {B}iomedical {I}maging},
+  year = {2021},
+  optkeywords = {nonuniform fast Fourier transform; Nufft; magnetic resonance imaging; parallel computing; TensorFlow; tensor processing unit},
+  abstract = {This work presents a parallel algorithm for implementing the nonuniform Fast Fourier transform (NUFFT) on Google{\textquoteright}s Tensor Processing Units (TPUs). TPU is a hardware accelerator originally designed for deep learning applications. NUFFT is considered as the main computation bottleneck in magnetic resonance (MR) image reconstruction when k-space data are sampled on a nonuniform grid. The computation of NUFFT consists of three operations: an apodization, an FFT, and an interpolation, all being formulated as tensor operations in order to fully utilize TPU{\textquoteright}s strength in matrix multiplications. The implementation is with TensorFlow. Numerical examples show 20x{\~}80x acceleration of NUFFT on a single-card TPU compared to CPU implementations. The strong scaling analysis shows a close-to-linear scaling of NUFFT on up to 64 TPU cores. The proposed implementation of NUFFT on TPUs is promising in accelerating MR image reconstruction and achieving practical runtime for clinical applications.}
+}
+</pre>
+
+<a name="Marin2021"></a><pre>
+@inproceedings{<a href="publications.html#Marin2021">Marin2021</a>,
+  author = {Marin, Thibault
+and Djebra, Yanis
+and Han, Paul K.
+and Landes, Vanessa
+and Zhuo, Yue
+and Su, Kuan-Hao
+and El Fakhri, Georges
+and Ma, Chao},
+  title = {{C}omparison of deformable registration techniques for real-time {MR}-based motion correction in {PET}/{MR}},
+  booktitle = {{P}roc. {ISMRM}},
+  year = {2021},
+  abstract = {Motion during acquisition of PET/MR data can severely degrade image quality of PET/MR studies. We have previously reported an MR-based motion correction technique capable of correcting for irregular motion patterns such as bulk motion and irregular respiratory motion. The method is based on a subspace MR model enabling reconstruction of real-time volumetric MR images (9 frames per second). In this work, we present improvements to the motion estimation method used to obtain motion fields from real-time MR images. We compare the performance of three packages for irregular motion patterns.}
+}
+</pre>
+
+<a name="Marin2021a"></a><pre>
+@inproceedings{<a href="publications.html#Marin2021a">Marin2021a</a>,
+  author = {Marin, Thibault
+and Han, Paul K.
+and Zhuo, Yue
+and Djebra, Yanis
+and Liu, Fang
+and El Fakhri, Georges
+and Ma, Chao},
+  title = {{T}hree-dimensional cardiac {T}1 mapping using subspace and sparsity constrained direct estimation},
+  booktitle = {{P}roc. {ISMRM}},
+  year = {2021},
+  abstract = {Cardiac T1 mapping is a powerful MR imaging technique for quantitative assessment of microstructural changes in myocardial tissues. Existing methods are limited in terms of spatial coverage and through-plane resolution due to limitations in acquisition speed and the presence of cardiac and respiratory motion. This work presents a direct reconstruction framework, which allows estimation of 3D T1 maps from sparsely sampled k-space data using physical modeling through the Bloch equation, low-rank constraints on the dynamic images and sparsity constraints on the estimated T1 maps.}
+}
+</pre>
+
+<a name="Lu2020"></a><pre>
+@inproceedings{<a href="publications.html#Lu2020">Lu2020</a>,
+  author = {Lu, Tianjian
+and Marin, Thibault
+and Zhuo, Yue
+and Chen, Yi-Fan
+and Ma, Chao},
+  title = {{A}ccelerating {MRI} {R}econstruction on {TPU}s},
+  booktitle = {{IEEE} {H}igh {P}erformance {E}xtreme {C}omputing {C}onference},
+  year = {2020},
+  publisher = {Ieee},
+  pages = {1--9},
+  optkeywords = {compressed sensing; non-Cartesian MR image reconstruction; parallel computing; parallel imaging; TensorFlow; tensor processing unit},
+  abstract = {The advanced magnetic resonance (MR) image reconstructions such as the compressed sensing and subspace-based imaging are considered as large-scale, iterative, optimization problems. Given the large number of reconstructions required by the practical clinical usage, the computation time of these advanced reconstruction methods is often unacceptable. In this work, we propose using Google{\textquoteright}s Tensor Processing Units (TPUs) to accelerate the MR image reconstruction. TPU is an application-specific integrated circuit (ASIC) for machine learning applications, which has recently been used to solve large-scale scientific computing problems. As proof-of-concept, we implement the alternating direction method of multipliers (ADMM) in TensorFlow to reconstruct images on TPUs. The reconstruction is based on multi-channel, sparsely sampled, and radial-trajectory k-space data with sparsity constraints. The forward and inverse non-uniform Fourier transform operations are formulated in terms of matrix multiplications as in the discrete Fourier transform. The sparsifying transform and its adjoint operations are formulated as convolutions. The data decomposition is applied to the measured k-space data such that the aforementioned tensor operations are localized within individual TPU cores. The data decomposition and the inter-core communication strategy are designed in accordance with the TPU interconnect network topology in order to minimize the communication time. The accuracy and the high parallel efficiency of the proposed TPU-based image reconstruction method are demonstrated through numerical examples.},
+  doi = {10.1109/Hpec43674.2020.9286192},
+  opturl = {https://arxiv.org/pdf/2006.14080.pdf},
+  opturl = {https://doi.org/10.1109/Hpec43674.2020.9286192},
+  file = {docs/Lu2020.pdf}
+}
+</pre>
+
+<a name="Zhuo2019"></a><pre>
+@article{<a href="publications.html#Zhuo2019">Zhuo2019</a>,
+  author = {Zhuo, Yue
+and Hu, Huan
+and Wang, Yifei
+and Marin, Thibault
+and Lu, Meng},
+  title = {{P}hotonic crystal slab biosensors fabricated with helium ion lithography ({HIL})},
+  journal = {Sensors and Actuators A: Physical},
+  year = {2019},
+  volume = {297},
+  pages = {111493},
+  issn = {0924-4247},
+  doi = {10.1016/j.sna.2019.07.017},
+  opturl = {https://linkinghub.elsevier.com/retrieve/pii/S0924424719305217},
+  opturl = {https://doi.org/10.1016/j.sna.2019.07.017},
+  file = {docs/Zhuo2019.pdf}
+}
+</pre>
+
+<a name="Cunningham2019"></a><pre>
+@misc{<a href="publications.html#Cunningham2019">Cunningham2019</a>,
+  author = {Cunningham, Brian T.
+and Zhuo, Yue
+and Harley, Brendan A.
+and Choi, Ji Sun
+and Marin, Thibault
+and Lu, Yi},
+  title = {{P}hotonic {R}esonator {A}bsorption {M}icroscopy ({PRAM}) for {D}igital {R}esolution {B}iomolecular {D}iagnostics},
+  year = {2019},
+  abstract = {A digital assay for a micro RNA (miRNA) or other target analyte in a sample makes use of nanoparticles that absorb light at the resonant wavelength of a photonic crystal (PC). Such nanoparticles locally quench the resonant reflection of light from the PC when present on the surface of the PC. The nanoparticles are functionalized to specifically bind to the target analyte, and the PC surface is functionalized to specifically bind to the nanoparticles that have bound to the target analyte. The sample is exposed to the functionalized nanoparticles, and the individual nanoparticles bound to the PC surface can be identified and counted based on reduced intensity values in the reflected light from the PC. The number of bound nanoparticles that are counted in this way can be correlated to the abundance of the target analyte in the sample.},
+  doi = {https://www.patentguru.com/US2019127784A1},
+  opturl = {https://worldwide.espacenet.com/publicationDetails/biblio?FT=D&date=20190502&DB=EPODOC&locale=&CC=US&NR=2019127784A1$\#$},
+  opturl = {https://doi.org/https://www.patentguru.com/US2019127784A1},
+  file = {docs/Cunningham2019.pdf}
+}
+</pre>
+
+<a name="Cunningham2019a"></a><pre>
+@misc{<a href="publications.html#Cunningham2019a">Cunningham2019a</a>,
+  author = {Cunningham, Brian T.
+and Zhuo, Yue
+and Harley, Brendan A.
+and Choi, Ji Sun
+and Marin, Thibault},
+  title = {{P}hotonic {R}esonator {O}utcoupler {M}icroscopy ({PROM})},
+  year = {2019},
+  abstract = {Photonic Resonator Outcoupler Microscopy (PROM) is a novel, label-free approach for dynamic, long-term, quantitative imaging of a sample on a surface of a photonic crystal (PC) biosensor, in which components of the sample outcouple photons from the resonant evanescent field, resulting in highly localized reductions of the reflected light intensity. By mapping changes in the resonant reflected peak intensity from the PC surface, components of a sample (e.g., focal adhesions) can be detected and dynamically tracked. To demonstrate the simplicity and utility of PROM for focal adhesion imaging, PROM images are compared with biosensor images of surface-bound dielectric permittivity and with fluorescence microscopy images of labeled adhesion molecules in dental stem cells. PROM can dynamically quantify the surface-attached cellular mass density and lateral dimensions of focal adhesion clusters.},
+  doi = {https://www.patentguru.com/US2019120766A1},
+  opturl = {https://worldwide.espacenet.com/publicationDetails/biblio?CC=US&NR=2019120766A1&KC=A1&FT=D$\#$},
+  opturl = {https://doi.org/https://www.patentguru.com/US2019120766A1},
+  file = {docs/Cunningham2019a.pdf}
+}
 </pre>
 
 <a name="Canales-Benavides2019"></a><pre>
@@ -28,69 +176,215 @@ and Schnell, Martin},
   doi = {10.1364/Ao.58.000a55},
   opturl = {<a href="http://ao.osa.org/abstract.cfm?URI=ao-58-5-A55">http://ao.osa.org/abstract.cfm?URI=ao-58-5-A55</a>},
   opturl = {https://doi.org/10.1364/Ao.58.000a55},
-  file = {docs/Canales-Benavides2019.pdf}
+  file = {:https://dell-desktop:81/ybib/./files/Canales-Benavides2019.pdf:PDF}
 }
 </pre>
 
-<a name="Chen2013"></a><pre>
-@article{<a href="publications.html#Chen2013">Chen2013</a>,
-  author = {Chen, Weili
-and Long, Kenneth D.
-and Lu, Meng
-and Chaudhery, Vikram
-and Yu, Hojeong
+<a name="Zhuo2018"></a><pre>
+@article{<a href="publications.html#Zhuo2018">Zhuo2018</a>,
+  author = {Zhuo, Yue
 and Choi, Ji Sun
-and Polans, James
-and Zhuo, Yue
-and Harley, Brendan A. C.
+and Marin, Thibault
+and Yu, Hojeong
+and Harley, Brendan A.
 and Cunningham, Brian T.},
-  title = {{P}hotonic crystal enhanced microscopy for imaging of live cell adhesion},
-  journal = {The Analyst},
-  year = {2013},
-  volume = {138},
-  number = {20},
-  pages = {5886--5894},
-  optkeywords = {Animals; Biosensing Techniques/*methods; Cell Adhesion/physiology; Cells; Cultured; *Chemotaxis/physiology; Crystallization/*methods; Mice; Microscopy; Confocal/methods; *Optical Phenomena; Stem Cells/chemistry/*cytology/physiology},
-  abstract = {A form of microscopy that utilizes a photonic crystal biosensor surface as a substrate for cell attachment enables label-free, quantitative, submicron resolution, time-resolved imaging of cell-surface interactions without cytotoxic staining agents or temporally-unstable fluorophores. Other forms of microscopy do not provide this direct measurement of live cell-surface attachment localization and strength that includes unique, dynamic morphological signatures critical to the investigation of important biological phenomena such as stem cell differentiation, chemotaxis, apoptosis, and metastasis. Here, we introduce Photonic Crystal Enhanced Microscopy (PCEM), and apply it to the study of murine dental stem cells to image the evolution of cell attachment and morphology during chemotaxis and drug-induced apoptosis. PCEM provides rich, dynamic information about the evolution of cell-surface attachment profiles over biologically relevant time-scales. Critically, this method retains the ability to monitor cell behavior with spatial resolution sufficient for observing both attachment footprints of filopodial extensions and intracellular attachment strength gradients.},
-  issn = {0003-2654},
-  doi = {10.1039/c3an01541f},
-  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/23971078">http://www.ncbi.nlm.nih.gov/pubmed/23971078</a>},
-  opturl = {https://doi.org/10.1039/c3an01541f},
-  file = {docs/Chen2013.pdf}
-}
-</pre>
-
-<a name="Choi2015"></a><pre>
-@inproceedings{<a href="publications.html#Choi2015">Choi2015</a>,
-  author = {Choi, Ji Sun
-and Ilin, Yelena
-and Zhuo, Yue
-and Cunningham, Brian
-and Kraft, Mary
-and Harley, Brendan},
-  title = {{L}abel-{F}ree {A}nalysis of {S}ingle {H}ematopoietic {S}tem and {P}rogenitor {C}ells},
-  booktitle = {{T}issue {E}ngineering {P}art {A}},
-  year = {2015},
-  volume = {21},
+  title = {{Q}uantitative analysis of focal adhesion dynamics using photonic resonator outcoupler microscopy ({PROM})},
+  journal = {Light: Science {\&} Applications},
+  year = {2018},
+  volume = {7},
   number = {1},
-  pages = {S237-S238},
-  issn = {1937-3341},
-  opturl = {https://www.researchgate.net/publication/317378910_Label-Free_Analysis_of_Single_Hematopoietic_Stem_and_Progenitor_Cells}
+  pages = {9},
+  abstract = {Focal adhesions are critical cell membrane components that regulate adhesion and migration and have cluster dimensions that correlate closely with adhesion engagement and migration speed. We utilized a label-free approach for dynamic, long-term, quantitative imaging of cell--surface interactions called photonic resonator outcoupler microscopy (PROM) in which membrane-associated protein aggregates outcoupled photons from the resonant evanescent field of a photonic crystal biosensor, resulting in a highly localized reduction of the reflected light intensity. By mapping the changes in the resonant reflected peak intensity from the biosensor surface, we demonstrate the ability of PROM to detect focal adhesion dimensions. Similar spatial distributions can be observed between PROM images and fluorescence-labeled images of focal adhesion areas in dental epithelial stem cells. In particular, we demonstrate that cell--surface contacts and focal adhesion formation can be imaged by two orthogonal label-free modalities in PROM simultaneously, providing a general-purpose tool for kinetic, high axial-resolution monitoring of cell interactions with basement membranes.},
+  issn = {2047-7538},
+  doi = {10.1038/s41377-018-0001-5},
+  opturl = {https://doi.org/10.1038/s41377-018-0001-5},
+  file = {docs/Zhuo2018.pdf}
 }
 </pre>
 
-<a name="Choi2014"></a><pre>
-@inproceedings{<a href="publications.html#Choi2014">Choi2014</a>,
-  author = {Choi, Ji Sun
-and Ilin, Yelena
-and Zhuo, Yue
-and Cunningham, Brian
-and Kraft, Mary
-and Harley, Brendan},
-  title = {{S}ingle-{C}ell {A}pproaches to {A}ssess {H}ematopoietic {S}tem {C}ell {R}esponses to {M}atrix {C}ues},
+<a name="Zhuo2018a"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2018a">Zhuo2018a</a>,
+  author = {Zhuo, Yue
+and Choi, Ji Sun
+and Marin, Thibault
+and Yu, Hojeong
+and Harley, Brendan A.
+and Cunningham, Brian T.},
+  title = {{P}hotonic {R}esonator {O}utcoupler {M}icroscopy ({PROM}) for {Q}uantitative {M}onitoring of {S}tem {C}ell {F}ocal {A}dhesion {A}rea},
+  booktitle = {{F}rontiers in {O}ptics},
+  year = {2018},
+  publisher = {Optical Society of America},
+  pages = {JTu3A.119},
+  abstract = {We developed a novel label-free imaging approach, named Photonic Resonator Outcoupler Microscopy (PROM) utilizing the reduction of the peak-resonance intensity reflected from a photonic crystal surface. PROM can monitor the variation of focal adhesion areas in live cells dynamically and quantitatively for extended time.},
+  isbn = {978-1-943580-46-0},
+  doi = {10.1364/FIO.2018.JTu3A.119},
+  opturl = {https://www.osapublishing.org/abstract.cfm?uri=FiO-2018-JTu3A.119},
+  opturl = {https://doi.org/10.1364/FIO.2018.JTu3A.119},
+  file = {docs/Zhuo2018a.pdf}
+}
+</pre>
+
+<a name="Zhuo2018b"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2018b">Zhuo2018b</a>,
+  author = {Zhuo, Yue
+and Choi, Ji Sun
+and Marin, Thibault
+and Yu, Hojeong
+and Harley, Brendan A.
+and Cunningham, Brian T.},
+  title = {{S}tem {C}ell {A}dhesion {I}maging with {P}hotonic {R}esonator {O}utcoupler {M}icroscopy ({PROM})},
   booktitle = {{B}iomedical {E}ngineering {S}ociety {A}nnual {M}eeting},
-  year = {2014},
-  opturl = {https://www.researchgate.net/publication/317379314_Single-Cell_Approaches_to_Assess_Hematopoietic_Stem_Cell_Responses_to_Matrix_Cues}
+  year = {2018},
+  abstract = {Focal adhesions (FAs) are critical cellular membrane components that regulate cell adhesion and migration [1]. We developed a label-free imaging biosensor approach, named Photonic Resonator Outcoupler Microscopy (PROM), for dynamic, long-term, quantitative imaging of cell-surface interactions [2-7]. Our measurements show that membrane-associated adhesion protein aggregates scatter photons from the resonant electromagnetic standing wave on a photonic crystal surface, resulting in a highly localized reduction of the reflected light intensity.},
+  file = {docs/Zhuo2018b.pdf}
+}
+</pre>
+
+<a name="Zhuo2017"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2017">Zhuo2017</a>,
+  author = {Zhuo, Yue
+and Choi, Ji Sun
+and Marin, Thibault
+and Yu, Hojeong
+and Harley, Brendan A.
+and Cunningham, Brian T.},
+  title = {{C}ell {A}dhesion {P}henotype {L}ibrary with {P}hotonic {C}rystal {E}nhanced {M}icroscopy},
+  booktitle = {{O}ptics in the {L}ife {S}ciences {C}ongress},
+  year = {2017},
+  pages = {BoS2A7},
+  abstract = {We apply PCEM to investigate adhesion of different types of cells as a cell adhesion phenotype library. PCEM imaging provides a new tool to gain a deeper understanding of the fundamental mechanisms involved with cell-adhesion.},
+  doi = {10.1364/BODA.2017.BoS2A.7},
+  opturl = {https://doi.org/10.1364/BODA.2017.BoS2A.7},
+  file = {docs/Zhuo2017.pdf}
+}
+</pre>
+
+<a name="Zhuo2017a"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2017a">Zhuo2017a</a>,
+  author = {Zhuo, Yue
+and Choi, Ji Sun
+and Marin, Thibault
+and Yu, Hojeong
+and Harley, Brendan A.
+and Cunningham, Brian T.},
+  title = {{Q}uantitative {L}abel-free {I}maging of {L}ive-cell {A}dhesion {U}sing {P}hotonic {C}rystal {E}nhanced {M}icroscopy ({PCEM})},
+  booktitle = {{C}onference on {L}asers and {E}lectro-{O}ptics ({CLEO})},
+  year = {2017},
+  abstract = {To quantify live-cell adhesion, a photonic crystal biosensor surface with an extracellular matrix coating is monitored within a PCEM instrument to dynamically image changes in attached cell mass-density during live-cell attachment, spreading, and drug response.},
+  isbn = {978-1-5386-2019-9},
+  doi = {10.1364/CLEO_SI.2017.SM1C.2},
+  opturl = {https://doi.org/10.1364/CLEO_SI.2017.SM1C.2},
+  file = {docs/Zhuo2017a.pdf}
+}
+</pre>
+
+<a name="Choi2017"></a><pre>
+@inbook{<a href="publications.html#Choi2017">Choi2017</a>,
+  author = {Choi, Ji Sun
+and Zhuo, Yue
+and Cunningham, Brian T.
+and Harley, Brendan A.},
+  title = {{N}on-invasive optical imaging on photonic crystalsurface of stem cell differentiation in biomaterials},
+  booktitle = {Monitoring and Evaluation of Biomaterials and their Performance in vivo},
+  year = {2017},
+  publisher = {Elsevier Inc.},
+  pages = {195--207},
+  isbn = {9780081006030},
+  file = {docs/Choi2017.pdf}
+}
+</pre>
+
+<a name="Zhuo2017b"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2017b">Zhuo2017b</a>,
+  author = {Zhuo, Yue
+and Choi, Ji Sun
+and Marin, Thibault
+and Yu, Hojeong
+and Harley, Brendan A.
+and Cunningham, Brian T.},
+  title = {{L}abel-free {I}maging of {S}tem {C}ell {A}dhesion and {D}ynamic {T}racking of {B}oundary {E}volution {U}sing {P}hotonic {C}rystal {E}nhanced {M}icroscopy ({PCEM})},
+  booktitle = {{P}roceedings of {M}icroscopy {\&} {M}icroanalysis},
+  year = {2017},
+  volume = {23},
+  pages = {1142--1143},
+  abstract = {Cell adhesion provides structural support and contributes to functional processes crucial for cellular proliferation and survival. We apply a new form of label-free biosensor imaging called Photonic Crystal Enhanced Microscopy (PCEM) to investigate adhesion/migration of stem cells [1-4]. By applying image processing algorithms to analyze the PCEM images, we offer insight into how the cellular membrane is dynamically organized during cell adhesion.},
+  doi = {10.1017/S1431927617006377},
+  opturl = {https://www.cambridge.org/core/journals/microscopy-and-microanalysis/article/labelfree-imaging-of-stem-cell-adhesion-and-dynamic-tracking-of-boundary-evolution-using-photonic-crystal-enhanced-microscopy-pcem/C54B2C17D8D358188F5A0D74BD4A4651},
+  opturl = {https://doi.org/10.1017/S1431927617006377},
+  file = {docs/Zhuo2017b.pdf}
+}
+</pre>
+
+<a name="Zhuo2016"></a><pre>
+@article{<a href="publications.html#Zhuo2016">Zhuo2016</a>,
+  author = {Zhuo, Yue
+and Choi, Ji Sun
+and Marin, Thibault
+and Yu, Hojeong
+and Harley, Brendan A.
+and Cunningham, Brian T.},
+  title = {{Q}uantitative imaging of cell membrane-associated effective mass density using {P}hotonic {C}rystal {E}nhanced {M}icroscopy ({PCEM})},
+  journal = {Progress in Quantum Electronics},
+  year = {2016},
+  volume = {50},
+  pages = {1--18},
+  optkeywords = {photonic crystal enhanced microscopy (PCEM); photonic crystal (PC); photonic crystal slab; photonic crystal biosensor; live cell imaging; label-free imaging; stem cell; cancer cell; refractive index (RI); peak wavelength value (PWV); peak wavelength shift (PWS); mass density (MD); cell membrane-associated effective mass density},
+  abstract = {Adhesion is a critical cellular process that contributes to migration, apoptosis, differentiation, and division. It is followed by the redistribution of cellular materials at the cell membrane or at the cell-surface interface for cells interacting with surfaces, such as basement membranes. Dynamic and quantitative tracking of changes in cell adhesion mass redistribution is challenging because cells are rapidly moving, inhomogeneous, and nonequilibrium objects, whose physical and mechanical properties are difficult to measure or predict. Here, we report a novel biosensor based microscopy approach termed Photonic Crystal Enhanced Microscopy (PCEM) that enables the movement of cellular materials at the plasma membrane of individual live cells to be dynamically monitored and quantitatively imaged. PCEM utilizes a photonic crystal biosensor surface, which can be coated with arbitrary extracellular matrix materials to facilitate cellular interactions, within a modified brightfield microscope with a low intensity non-coherent light source. Benefiting from the high sensitivity, narrow resonance peak, and tight spatial confinement of the evanescent field atop the photonic crystal biosensor, PCEM enables label-free live cell imaging with high sensitivity and high lateral and axial spatial-resolution, thereby allowing dynamic adhesion phenotyping of single cells without the use of fluorescent tags or stains. We apply PCEM to investigate adhesion and the early stage migration of different types of stem cells and cancer cells. By applying image processing algorithms to analyze the complex spatiotemporal information generated by PCEM, we offer insight into how the plasma membrane of anchorage dependent cells is dynamically organized during cell adhesion. The imaging and analysis results presented here provide a new tool for biologists to gain a deeper understanding of the fundamental mechanisms involved with cell adhesion and concurrent or subsequent migration events.},
+  doi = {10.1016/j.pquantelec.2016.10.001},
+  opturl = {https://doi.org/10.1016/j.pquantelec.2016.10.001},
+  file = {docs/Zhuo2016.pdf}
+}
+</pre>
+
+<a name="Cunningham2016"></a><pre>
+@article{<a href="publications.html#Cunningham2016">Cunningham2016</a>,
+  author = {Cunningham, Brian T.
+and Zhang, Meng
+and Zhuo, Yue
+and Kwon, Lydia
+and Race, Caitlin},
+  title = {{R}ecent {A}dvances in {B}iosensing {W}ith {P}hotonic {C}rystal {S}urfaces: {A} {R}eview},
+  journal = {IEEE Sensors Journal},
+  year = {2016},
+  volume = {16},
+  number = {10},
+  pages = {3349--3366},
+  abstract = {Photonic crystal surfaces that are designed to function as wavelength-selective optical resonators have become a widely adopted platform for label-free biosensing, and for enhancement of the output of photon-emitting tags used throughout life science research and in vitro diagnostics. While some applications, such as analysis of drug-protein interactions, require extremely high resolution and the ability to accurately correct for measurement artifacts, others require sensitivity that is high enough for detection of disease biomarkers in serum with concentrations less than 1 pg/ml. As the analysis of cells becomes increasingly important for studying the behavior of stem cells, cancer cells, and biofilms under a variety of conditions, approaches that enable high resolution imaging of live cells without cytotoxic stains or photobleachable fluorescent dyes are providing new tools to biologists who seek to observe individual cells over extended time periods. This paper will review several recent advances in photonic crystal biosensor detection instrumentation and device structures that are being applied towards direct detection of small molecules in the context of high throughput drug screening, photonic crystal fluorescence enhancement as utilized for high sensitivity multiplexed cancer biomarker detection, and label-free high resolution imaging of cells and individual nanoparticles as a new tool for life science research and single-molecule diagnostics.},
+  issn = {1530-437X},
+  doi = {10.1109/JSEN.2015.2429738},
+  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/27642265">http://www.ncbi.nlm.nih.gov/pubmed/27642265</a>},
+  opturl = {https://doi.org/10.1109/JSEN.2015.2429738},
+  file = {docs/Cunningham2016.pdf}
+}
+</pre>
+
+<a name="Zhuo2016b"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2016b">Zhuo2016b</a>,
+  author = {Zhuo, Yue
+and Choi, Ji Sun
+and Marin, Thibault
+and Yu, Hojeong
+and Harley, Brendan A.
+and Cunningham, Brian T.},
+  title = {{P}hotonic {C}rystal {E}nhanced {M}icroscopy ({PCEM}) for {M}ultimode {D}ynamic {Q}uantitative {I}maging of {C}ell {A}dhesion},
+  booktitle = {{I}nternational {E}ngineering in {M}edicine and {B}iology {C}onference ({EMBC})},
+  year = {2016},
+  abstract = {We describe a novel label-free biosensor imaging modality within Photonic Crystal Enhanced Microscopy in which cell membrane components locally reduce resonantreflection efficiency through photon out-scattering caused by protein clusters within focal adhesion sites.},
+  file = {docs/Zhuo2016b.pdf}
+}
+</pre>
+
+<a name="Zhuo2016a"></a><pre>
+@inbook{<a href="publications.html#Zhuo2016a">Zhuo2016a</a>,
+  author = {Zhuo, Yue
+and Cunningham, Brian T.},
+  title = {{L}abel-{F}ree {B}iosensor {I}maging on {P}hotonic {C}rystal {S}urfaces ({C}hpater 2)},
+  booktitle = {Label-Free Sensing},
+  year = {2016},
+  pages = {31--55},
+  isbn = {978-3-03842-211-2},
+  opturl = {https://www.mdpi.com/journal/biosensors/special_issues/Label_free_biosensing},
+  file = {docs/Zhuo2016a.pdf}
 }
 </pre>
 
@@ -131,19 +425,120 @@ and Harley, Brendan},
 }
 </pre>
 
-<a name="Choi2017"></a><pre>
-@inbook{<a href="publications.html#Choi2017">Choi2017</a>,
-  author = {Choi, Ji Sun
+<a name="Zhuo2015a"></a><pre>
+@article{<a href="publications.html#Zhuo2015a">Zhuo2015a</a>,
+  author = {Zhuo, Yue
+and Cunningham, Brian T.},
+  title = {{L}abel-{F}ree {B}iosensor {I}maging on {P}hotonic {C}rystal {S}urfaces},
+  journal = {Sensors (Basel, Switzerland)},
+  year = {2015},
+  volume = {15},
+  number = {9},
+  pages = {21613--21635},
+  optkeywords = {*Biocompatible Materials; Biosensing Techniques/*methods; Equipment Design; *Nanoparticles; *Photons; Protein Binding; biomaterial detection; label-free bioimaging; live cell imaging; nanoparticle detection; nanophotonics; photonic crystal; photonic crystal biosensor; photonic crystal enhanced fluorescence (PCEF); photonic crystal enhanced microscopy (PCEM); photonic crystal surface; protein-protein binding detection},
+  abstract = {We review the development and application of nanostructured photonic crystal surfaces and a hyperspectral reflectance imaging detection instrument which, when used together, represent a new form of optical microscopy that enables label-free, quantitative, and kinetic monitoring of biomaterial interaction with substrate surfaces. Photonic Crystal Enhanced Microscopy (PCEM) has been used to detect broad classes of materials which include dielectric nanoparticles, metal plasmonic nanoparticles, biomolecular layers, and live cells. Because PCEM does not require cytotoxic stains or photobleachable fluorescent dyes, it is especially useful for monitoring the long-term interactions of cells with extracellular matrix surfaces. PCEM is only sensitive to the attachment of cell components within {\~}200 nm of the photonic crystal surface, which may correspond to the region of most interest for adhesion processes that involve stem cell differentiation, chemotaxis, and metastasis. PCEM has also demonstrated sufficient sensitivity for sensing nanoparticle contrast agents that are roughly the same size as protein molecules, which may enable applications in {\textquoteleft}{\textquoteleft}digital{\textquoteright}{\textquoteright} diagnostics with single molecule sensing resolution. We will review PCEM{\textquoteright}s development history, operating principles, nanostructure design, and imaging modalities that enable tracking of optical scatterers, emitters, absorbers, and centers of dielectric permittivity.},
+  issn = {1424-8220},
+  doi = {10.3390/s150921613},
+  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/26343684">http://www.ncbi.nlm.nih.gov/pubmed/26343684</a>},
+  opturl = {https://doi.org/10.3390/s150921613},
+  file = {docs/Zhuo2015a.pdf}
+}
+</pre>
+
+<a name="Cunningham2015"></a><pre>
+@inproceedings{<a href="publications.html#Cunningham2015">Cunningham2015</a>,
+  author = {Cunningham, Brian T.
+and Zhang, Meng
 and Zhuo, Yue
-and Cunningham, Brian T.
-and Harley, Brendan A.},
-  title = {{N}on-invasive optical imaging on photonic crystalsurface of stem cell differentiation in biomaterials},
-  booktitle = {Monitoring and Evaluation of Biomaterials and their Performance in vivo},
-  year = {2017},
-  publisher = {Elsevier Inc.},
-  pages = {195--207},
-  isbn = {9780081006030},
-  file = {docs/Choi2017.pdf}
+and Kwon, Lydia
+and Race, Caitlin},
+  title = {{R}eview of {R}ecent {A}dvances in {B}iosensing with {P}hotonic {C}rystal {S}urfaces},
+  booktitle = {{S}pecial {I}ssue on {S}elected {P}apers {F}rom {T}he {IEEE} {S}ensors 2014 {C}onference},
+  year = {2015},
+  abstract = {Photonic crystal surfaces that are designed to function as wavelength-selective optical resonators have become a widely adopted platform for label-free biosensing, and for enhancement of the output of photon-emitting tags used throughout life science research and in vitro diagnostics. While some applications, such as analysis of drug-protein interactions, require extremely high resolution and the ability to accurately correct for measurement artifacts, others require sensitivity that is high enough for detection of disease biomarkers in serum with concentrations less than 1 pg/ml. As the analysis of cells becomes increasingly important for studying the behavior of stem cells, cancer cells, and biofilms under a variety of conditions, approaches that enable high resolution imaging of live cells without cytotoxic stains or photobleachable fluorescent dyes are providing new tools to biologists who seek to observe individual cells over extended time periods. This paper will review several recent advances in photonic crystal biosensor detection instrumentation and device structures that are being applied towards direct detection of small molecules in the context of high throughput drug screening, photonic crystal fluorescence enhancement as utilized for high sensitivity multiplexed cancer biomarker detection, and label-free high resolution imaging of cells and individual nanoparticles as a new tool for life science research and single-molecule diagnostics.},
+  doi = {doi10.1109/JSEN.2015.2429738},
+  opturl = {https://www.semanticscholar.org/paper/Review-of-Recent-Advances-in-Biosensing-with-Cunningham-Zhang/3c447139785555f61c530e73473c8c04547cd6f3},
+  opturl = {https://doi.org/doi10.1109/JSEN.2015.2429738},
+  file = {docs/Cunningham2015.pdf}
+}
+</pre>
+
+<a name="Zhuo2015"></a><pre>
+@article{<a href="publications.html#Zhuo2015">Zhuo2015</a>,
+  author = {Zhuo, Yue
+and Qian, Tongcheng
+and Wu, Yiqian
+and Seong, Jihye
+and Gong, Ya
+and Ma, Hongwei
+and Wang, Yingxiao
+and Lu, Shaoying},
+  title = {{S}ubcellular and {D}ynamic {C}oordination between {S}rc {A}ctivity and {C}ell {P}rotrusion in {M}icroenvironment},
+  journal = {Scientific Reports},
+  year = {2015},
+  volume = {5},
+  pages = {12963},
+  optkeywords = {Cell Movement/genetics; Cell Polarity/genetics; Cell Surface Extensions/genetics; Cellular Microenvironment/*genetics; Endothelial Cells/*cytology/metabolism; Fluorescence Resonance Energy Transfer; Humans; Neovascularization; Physiologic/genetics; Wound Healing/*genetics; src-Family Kinases/genetics/*metabolism},
+  abstract = {Migration of endothelial cells is essential for wound healing and angiogenesis. Src kinase activity plays important roles at the protrusions of migrating endothelial cells. However, the spatiotemporal coordination between Src kinase activity and the protrusion of cell edge remains unclear. Therefore, we investigate these coordinated molecular events at the initiation of cell migration, by integrating microfabrication, fluorescence resonance energy transfer (FRET)-based biosensors, and automated computational image analysis. We demonstrate that the physical release of restrictive micropattern triggered a significant decrease of Src activity at the protrusive edge of endothelial cells. Computational cross-correlation analysis reveals that the decrease of Src activity occurred earlier in time, and was well-coordinated with the protrusion of cell edge in polarized cells, but not in non-polarized cells. These results suggest that the spatiotemporal control of Src kinase activity is well-coordinated with cell polarization and protrusion in endothelial cells upon the release of physical constraint, as that experienced by endothelial cells sprouting from stiff tumor micro-environment during angiogenesis. Therefore, our integrative approach enabled the discovery of a new model where Src is de-activated in coordination with membrane protrusion, providing important insights into the regulation of endothelial migration and angiogenesis.},
+  issn = {2045-2322},
+  doi = {10.1038/srep12963},
+  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/26261043">http://www.ncbi.nlm.nih.gov/pubmed/26261043</a>},
+  opturl = {https://doi.org/10.1038/srep12963},
+  file = {docs/Zhuo2015.pdf}
+}
+</pre>
+
+<a name="Zhuo2015b"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2015b">Zhuo2015b</a>,
+  author = {Zhuo, Yue
+and Choi, Ji Sun
+and Yu, Hojeong
+and Harley, Brendan A.
+and Cunningham, Brian T.},
+  title = {{D}ynamic label-free imaging of live-cell adhesion using photonic crystal enhanced microscopy ({PCEM})},
+  booktitle = {{C}onference on {L}asers and {E}lectro-{O}ptics ({CLEO})},
+  series = {2015 Conference on Lasers and Electro-Optics (CLEO)},
+  year = {2015},
+  pages = {1--2},
+  optkeywords = {adhesion; biological techniques; biomechanics; biosensors; cell motility; optical images; optical microscopy; optical sensors; photonic crystals; dynamic label-free imaging; live-cell adhesion; photonic crystal enhanced microscopy; cell attachment; photonic-crystal biosensor surface; live-cell movement; spatiotemporal-distribution; cellular material; Adhesives; Imaging; Stem cells; Optical surface waves; Image color analysis},
+  abstract = {We demonstrate label-free imaging of cell attachment upon a photonic-crystal biosensor surface. Newly-implemented PCEM image-analysis software is used to dynamically visualize individual live-cell movement and demonstrate the spatiotemporal-distribution of cellular material during adhesion and motion.},
+  isbn = {978-1-55752-968-8},
+  issn = {2160-8989},
+  opturl = {https://ieeexplore.ieee.org/document/7184049},
+  file = {docs/Zhuo2015b.pdf}
+}
+</pre>
+
+<a name="Choi2015"></a><pre>
+@inproceedings{<a href="publications.html#Choi2015">Choi2015</a>,
+  author = {Choi, Ji Sun
+and Ilin, Yelena
+and Zhuo, Yue
+and Cunningham, Brian
+and Kraft, Mary
+and Harley, Brendan},
+  title = {{L}abel-{F}ree {A}nalysis of {S}ingle {H}ematopoietic {S}tem and {P}rogenitor {C}ells},
+  booktitle = {{T}issue {E}ngineering {P}art {A}},
+  year = {2015},
+  volume = {21},
+  number = {1},
+  pages = {S237-S238},
+  issn = {1937-3341},
+  opturl = {https://www.researchgate.net/publication/317378910_Label-Free_Analysis_of_Single_Hematopoietic_Stem_and_Progenitor_Cells}
+}
+</pre>
+
+<a name="Zhuo2015c"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2015c">Zhuo2015c</a>,
+  author = {Zhuo, Yue
+and Choi, Ji Sun
+and Yu, Hojeong
+and Harley, Brendan A.
+and Cunningham, Brian T.},
+  title = {{S}urface {A}ttachment {P}rofiling of {S}tem {C}ell {D}ifferentiation {U}sing {P}hotonic {C}rystal {E}nhanced {M}icroscopy ({PCEM})},
+  booktitle = {{T}he {A}merican {S}ociety of {M}echanical {E}ngineers -- {N}ano{E}ngineering for {M}edicine and {B}iology ({ASME}-{NEMB})},
+  year = {2015},
+  file = {docs/Zhuo2015c.pdf}
 }
 </pre>
 
@@ -168,81 +563,6 @@ and Harley, Brendan A.},
 }
 </pre>
 
-<a name="Cunningham2016"></a><pre>
-@article{<a href="publications.html#Cunningham2016">Cunningham2016</a>,
-  author = {Cunningham, Brian T.
-and Zhang, Meng
-and Zhuo, Yue
-and Kwon, Lydia
-and Race, Caitlin},
-  title = {{R}ecent {A}dvances in {B}iosensing {W}ith {P}hotonic {C}rystal {S}urfaces: {A} {R}eview},
-  journal = {IEEE Sensors Journal},
-  year = {2016},
-  volume = {16},
-  number = {10},
-  pages = {3349--3366},
-  abstract = {Photonic crystal surfaces that are designed to function as wavelength-selective optical resonators have become a widely adopted platform for label-free biosensing, and for enhancement of the output of photon-emitting tags used throughout life science research and in vitro diagnostics. While some applications, such as analysis of drug-protein interactions, require extremely high resolution and the ability to accurately correct for measurement artifacts, others require sensitivity that is high enough for detection of disease biomarkers in serum with concentrations less than 1 pg/ml. As the analysis of cells becomes increasingly important for studying the behavior of stem cells, cancer cells, and biofilms under a variety of conditions, approaches that enable high resolution imaging of live cells without cytotoxic stains or photobleachable fluorescent dyes are providing new tools to biologists who seek to observe individual cells over extended time periods. This paper will review several recent advances in photonic crystal biosensor detection instrumentation and device structures that are being applied towards direct detection of small molecules in the context of high throughput drug screening, photonic crystal fluorescence enhancement as utilized for high sensitivity multiplexed cancer biomarker detection, and label-free high resolution imaging of cells and individual nanoparticles as a new tool for life science research and single-molecule diagnostics.},
-  issn = {1530-437X},
-  doi = {10.1109/JSEN.2015.2429738},
-  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/27642265">http://www.ncbi.nlm.nih.gov/pubmed/27642265</a>},
-  opturl = {https://doi.org/10.1109/JSEN.2015.2429738},
-  file = {docs/Cunningham2016.pdf}
-}
-</pre>
-
-<a name="Cunningham2015"></a><pre>
-@inproceedings{<a href="publications.html#Cunningham2015">Cunningham2015</a>,
-  author = {Cunningham, Brian T.
-and Zhang, Meng
-and Zhuo, Yue
-and Kwon, Lydia
-and Race, Caitlin},
-  title = {{R}eview of {R}ecent {A}dvances in {B}iosensing with {P}hotonic {C}rystal {S}urfaces},
-  booktitle = {{S}pecial {I}ssue on {S}elected {P}apers {F}rom {T}he {IEEE} {S}ensors 2014 {C}onference},
-  year = {2015},
-  abstract = {Photonic crystal surfaces that are designed to function as wavelength-selective optical resonators have become a widely adopted platform for label-free biosensing, and for enhancement of the output of photon-emitting tags used throughout life science research and in vitro diagnostics. While some applications, such as analysis of drug-protein interactions, require extremely high resolution and the ability to accurately correct for measurement artifacts, others require sensitivity that is high enough for detection of disease biomarkers in serum with concentrations less than 1 pg/ml. As the analysis of cells becomes increasingly important for studying the behavior of stem cells, cancer cells, and biofilms under a variety of conditions, approaches that enable high resolution imaging of live cells without cytotoxic stains or photobleachable fluorescent dyes are providing new tools to biologists who seek to observe individual cells over extended time periods. This paper will review several recent advances in photonic crystal biosensor detection instrumentation and device structures that are being applied towards direct detection of small molecules in the context of high throughput drug screening, photonic crystal fluorescence enhancement as utilized for high sensitivity multiplexed cancer biomarker detection, and label-free high resolution imaging of cells and individual nanoparticles as a new tool for life science research and single-molecule diagnostics.},
-  doi = {doi10.1109/JSEN.2015.2429738},
-  opturl = {https://www.semanticscholar.org/paper/Review-of-Recent-Advances-in-Biosensing-with-Cunningham-Zhang/3c447139785555f61c530e73473c8c04547cd6f3},
-  opturl = {https://doi.org/doi10.1109/JSEN.2015.2429738},
-  file = {docs/Cunningham2015.pdf}
-}
-</pre>
-
-<a name="Cunningham2019"></a><pre>
-@misc{<a href="publications.html#Cunningham2019">Cunningham2019</a>,
-  author = {Cunningham, Brian T.
-and Zhuo, Yue
-and Harley, Brendan A.
-and Choi, Ji Sun
-and Marin, Thibault
-and Lu, Yi},
-  title = {{P}hotonic {R}esonator {A}bsorption {M}icroscopy ({PRAM}) for {D}igital {R}esolution {B}iomolecular {D}iagnostics},
-  year = {2019},
-  abstract = {A digital assay for a micro RNA (miRNA) or other target analyte in a sample makes use of nanoparticles that absorb light at the resonant wavelength of a photonic crystal (PC). Such nanoparticles locally quench the resonant reflection of light from the PC when present on the surface of the PC. The nanoparticles are functionalized to specifically bind to the target analyte, and the PC surface is functionalized to specifically bind to the nanoparticles that have bound to the target analyte. The sample is exposed to the functionalized nanoparticles, and the individual nanoparticles bound to the PC surface can be identified and counted based on reduced intensity values in the reflected light from the PC. The number of bound nanoparticles that are counted in this way can be correlated to the abundance of the target analyte in the sample.},
-  doi = {https://www.patentguru.com/US2019127784A1},
-  opturl = {https://worldwide.espacenet.com/publicationDetails/biblio?FT=D&date=20190502&DB=EPODOC&locale=&CC=US&NR=2019127784A1$\#$},
-  opturl = {https://doi.org/https://www.patentguru.com/US2019127784A1},
-  file = {docs/Cunningham2019.pdf}
-}
-</pre>
-
-<a name="Cunningham2019a"></a><pre>
-@misc{<a href="publications.html#Cunningham2019a">Cunningham2019a</a>,
-  author = {Cunningham, Brian T.
-and Zhuo, Yue
-and Harley, Brendan A.
-and Choi, Ji Sun
-and Marin, Thibault},
-  title = {{P}hotonic {R}esonator {O}utcoupler {M}icroscopy ({PROM})},
-  year = {2019},
-  abstract = {Photonic Resonator Outcoupler Microscopy (PROM) is a novel, label-free approach for dynamic, long-term, quantitative imaging of a sample on a surface of a photonic crystal (PC) biosensor, in which components of the sample outcouple photons from the resonant evanescent field, resulting in highly localized reductions of the reflected light intensity. By mapping changes in the resonant reflected peak intensity from the PC surface, components of a sample (e.g., focal adhesions) can be detected and dynamically tracked. To demonstrate the simplicity and utility of PROM for focal adhesion imaging, PROM images are compared with biosensor images of surface-bound dielectric permittivity and with fluorescence microscopy images of labeled adhesion molecules in dental stem cells. PROM can dynamically quantify the surface-attached cellular mass density and lateral dimensions of focal adhesion clusters.},
-  doi = {https://www.patentguru.com/US2019120766A1},
-  opturl = {https://worldwide.espacenet.com/publicationDetails/biblio?CC=US&NR=2019120766A1&KC=A1&FT=D$\#$},
-  opturl = {https://doi.org/https://www.patentguru.com/US2019120766A1},
-  file = {docs/Cunningham2019a.pdf}
-}
-</pre>
-
 <a name="Hu2014"></a><pre>
 @article{<a href="publications.html#Hu2014">Hu2014</a>,
   author = {Hu, Huan
@@ -262,6 +582,98 @@ and King, William P.},
   opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/25327873">http://www.ncbi.nlm.nih.gov/pubmed/25327873</a>},
   opturl = {https://doi.org/10.1088/0957-4484/25/45/455301},
   file = {docs/Hu2014.pdf}
+}
+</pre>
+
+<a name="Zhuo2014"></a><pre>
+@article{<a href="publications.html#Zhuo2014">Zhuo2014</a>,
+  author = {Zhuo, Yue
+and Hu, Huan
+and Chen, Weili
+and Lu, Meng
+and Tian, Limei
+and Yu, Hojeong
+and Long, Kenneth D.
+and Chow, Edmond
+and King, William P.
+and Singamaneni, Srikanth
+and Cunningham, Brian T.},
+  title = {{S}ingle nanoparticle detection using photonic crystal enhanced microscopy},
+  journal = {The Analyst},
+  year = {2014},
+  volume = {139},
+  number = {5},
+  pages = {1007--1015},
+  optkeywords = {Biosensing Techniques/*methods; Crystallization/*methods; Microscopy/methods; Nanoparticles/*analysis; *Photons},
+  abstract = {We demonstrate a label-free biosensor imaging approach that utilizes a photonic crystal (PC) surface to detect surface attachment of individual dielectric and metal nanoparticles through measurement of localized shifts in the resonant wavelength and resonant reflection magnitude from the PC. Using a microscopy-based approach to scan the PC resonant reflection properties with 0.6 mum spatial resolution, we show that metal nanoparticles attached to the biosensor surface with strong absorption at the resonant wavelength induce a highly localized reduction in reflection efficiency and are able to be detected by modulation of the resonant wavelength. Experimental demonstrations of single-nanoparticle imaging are supported by finite-difference time-domain computer simulations. The ability to image surface-adsorption of individual nanoparticles offers a route to single molecule biosensing, in which the particles can be functionalized with specific recognition molecules and utilized as tags.},
+  issn = {0003-2654},
+  doi = {10.1039/c3an02295a},
+  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/24432353">http://www.ncbi.nlm.nih.gov/pubmed/24432353</a>},
+  opturl = {https://doi.org/10.1039/c3an02295a},
+  file = {docs/Zhuo2014.pdf}
+}
+</pre>
+
+<a name="Choi2014"></a><pre>
+@inproceedings{<a href="publications.html#Choi2014">Choi2014</a>,
+  author = {Choi, Ji Sun
+and Ilin, Yelena
+and Zhuo, Yue
+and Cunningham, Brian
+and Kraft, Mary
+and Harley, Brendan},
+  title = {{S}ingle-{C}ell {A}pproaches to {A}ssess {H}ematopoietic {S}tem {C}ell {R}esponses to {M}atrix {C}ues},
+  booktitle = {{B}iomedical {E}ngineering {S}ociety {A}nnual {M}eeting},
+  year = {2014},
+  opturl = {https://www.researchgate.net/publication/317379314_Single-Cell_Approaches_to_Assess_Hematopoietic_Stem_Cell_Responses_to_Matrix_Cues}
+}
+</pre>
+
+<a name="Zhuo2014a"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2014a">Zhuo2014a</a>,
+  author = {Zhuo, Yue
+and Tian, Limei
+and Chen, Weili
+and Yu, Hojeong
+and Singamaneni, Srikanth
+and Cunningham, Brian T.},
+  title = {{P}rotein-protein binding detection with nanoparticle photonic crystal enhanced microscopy ({NP}-{PCEM})},
+  booktitle = {36th {A}nnual {I}nternational {C}onference of the {IEEE} {E}ngineering in {M}edicine and {B}iology {S}ociety},
+  year = {2014},
+  publisher = {IEEE},
+  pages = {2069--2072},
+  optkeywords = {adsorption; biochemistry; biosensors; finite difference time-domain analysis; molecular biophysics; nanobiotechnology; nanoparticles; nanosensors; photonic crystals; proteins; surface plasmon resonance; protein-protein binding detection; nanoparticle photonic crystal enhanced microscopy; Np-Pcem; microscopy-based biosensing approach; photonic crystal surface; PC surface; functionalized nanoparticles; localized shift measurement; resonant wavelength; resonant reflection magnitude; localized surface plasmon resonant frequency; PC biosensor; PCEM imaging; single nanoparticle resolution; finite-difference time-domain computer simulations; FDTD computer simulations; surface adsorption; Optical surface waves; Surface waves; Plasmons; Gold; Animals; Antibodies; Antigens; Computer Simulation; Crystallization; Electromagnetic Fields; Metal Nanoparticles; Microscopy; Photons; Protein Binding; Protein Interaction Mapping; Rabbits; Spectrophotometry; Ultraviolet},
+  abstract = {We demonstrate a novel microscopy-based biosensing approach that utilizes a photonic crystal (PC) surface to detect protein-protein binding with the functionalized nanoparticles as tags. This imaging approach utilizes the measurement of localized shifts in the resonant wavelength and resonant reflection magnitude from the PC biosensor in the presence of individual nanoparticles. Moreover, it substantially increases the sensitivity of the imaging approach through tunable localized surface plasmon resonant frequency of the nanoparticle matching with the resonance of the PC biosensor. Experimental demonstrations of photonic crystal enhanced microscopy (PCEM) imaging with single nanoparticle resolution are supported by Finite-Difference Time-Domain (FDTD) computer simulations. The ability to detect the surface adsorption of individual nanoparticles as tags offers a route to single molecule biosensing with photonic crystal biosensor in the future.},
+  isbn = {978-1-4244-7929-0},
+  doi = {10.1109/EMBC.2014.6944023},
+  opturl = {https://doi.org/10.1109/EMBC.2014.6944023},
+  file = {docs/Zhuo2014a.pdf}
+}
+</pre>
+
+<a name="Zhuo2014b"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2014b">Zhuo2014b</a>,
+  author = {Zhuo, Yue
+and Hu, Huan
+and Chen, Weili
+and Lu, Meng
+and Tian, Limei
+and Yu, Hojeong
+and Long, Kenneth D.
+and Chow, Edmond
+and King, William P.
+and Singamaneni, Srikanth
+and Cunningham, Brian T.},
+  title = {{D}etection of single nanoparticles using photonic crystal enhanced microscopy},
+  booktitle = {2014 {C}onference on {L}asers and {E}lectro-{O}ptics ({CLEO}) -- {L}aser {S}cience to {P}hotonic {A}pplications},
+  year = {2014},
+  pages = {1--2},
+  optkeywords = {biomedical optical imaging; biosensors; nanomedicine; nanoparticles; nanosensors; optical microscopy; optical sensors; photonic crystals; plasmons; single nanoparticle detection; photonic crystal-enhanced microscopy; label-free biosensor imaging approach; photonic-crystal surface; nanoparticle plasmon resonant-frequency; photonic-crystal resonance; Optical surface waves; Surface waves; Educational institutions},
+  abstract = {We demonstrate a label-free biosensor imaging approach that utilizes a photonic-crystal surface to detect attachment of individual nanoparticles down to ~65{\texttimes}30{\texttimes}30nm3. Matching nanoparticle plasmon resonant-frequency to the photonic-crystal resonance substantially increases sensitivity of the approach.},
+  issn = {2160-8989},
+  doi = {10.1364/CLEO_SI.2014.SM4P.6},
+  opturl = {https://doi.org/10.1364/CLEO_SI.2014.SM4P.6},
+  file = {docs/Zhuo2014b.pdf}
 }
 </pre>
 
@@ -292,103 +704,31 @@ and Wang, Yingxiao},
 }
 </pre>
 
-<a name="Liao2011"></a><pre>
-@article{<a href="publications.html#Liao2011">Liao2011</a>,
-  author = {Liao, Xiaoling
-and Lu, Shaoying
+<a name="Chen2013"></a><pre>
+@article{<a href="publications.html#Chen2013">Chen2013</a>,
+  author = {Chen, Weili
+and Long, Kenneth D.
+and Lu, Meng
+and Chaudhery, Vikram
+and Yu, Hojeong
+and Choi, Ji Sun
+and Polans, James
 and Zhuo, Yue
-and Winter, Christina
-and Xu, Wenfeng
-and Li, Bo
-and Wang, Yingxiao},
-  title = {{B}one {P}hysiology, {B}iomaterial and the {E}ffect of {M}echanical/{P}hysical {M}icroenvironment on {MSC} {O}steogenesis: {A} {T}ribute to {S}hu {C}hien{\textquoteright}s 80th {B}irthday},
-  journal = {Cellular and Molecular Bioengineering},
-  year = {2011},
-  volume = {4},
-  number = {4},
-  pages = {579--590},
-  optkeywords = {Bone cells; Bone repair; Mechanical Environment; Tissue engineering; scaffolds},
-  abstract = {Professor Shu Chien is a world-renowned leader and founder of Bioengineering. In particular, he has made seminal contributions to advancing our systematic and insightful understanding of how cells perceive their physical/mechanical environment and coordinate cellular functions. In this review, as part of a tribute to Prof. Shu Chien{\textquoteright}s scientific achievement, we summarize the research progress in understanding the physiology of bone cells interacting with different mechanical/physical environments during bone tissue regeneration/repair. We first introduce the cellular composition of the bone tissue and the mechanism of the physiological bone regeneration/repair process. We then describe the properties and development of biomaterials for bone tissue engineering, followed by the highlighting of research progresses on the cellular response to mechanical environmental cues. Finally, several latest advancements in bone tissue regeneration and remaining challenges in the field are discussed for future research directions.},
-  issn = {1865-5025},
-  doi = {10.1007/s12195-011-0204-9},
-  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/25580165">http://www.ncbi.nlm.nih.gov/pubmed/25580165</a>},
-  opturl = {https://doi.org/10.1007/s12195-011-0204-9},
-  file = {docs/Liao2011.pdf}
-}
-</pre>
-
-<a name="Liao2012"></a><pre>
-@article{<a href="publications.html#Liao2012">Liao2012</a>,
-  author = {Liao, Xiaoling
-and Lu, Shaoying
-and Zhuo, Yue
-and Winter, Christina
-and Xu, Wenfeng
-and Wang, Yingxiao},
-  title = {{V}isualization of {S}rc and {FAK} {A}ctivity during the {D}ifferentiation {P}rocess from {HMSC}s to {O}steoblasts ({S}rc and {FAK} {A}ctivity during {D}ifferentiation)},
-  journal = {PloS one},
-  year = {2012},
-  publisher = {Public Library of Science},
-  address = {San Francisco, USA},
-  volume = {7},
-  number = {8},
-  pages = {e42709},
-  optkeywords = {Research Article; Biology; Physiology; Biotechnology; Developmental Biology},
-  abstract = {Non-receptor protein kinases FAK and Src play crucial roles in regulating cellular adhesions, growth, migration and differentiation. However, it remains unclear how the activity of FAK and Src is regulated during the differentiation process from mesenchymal stem cells (MSCs) to bone cells. In this study, we used genetically encoded FAK and Src biosensors based on fluorescence resonance energy transfer (FRET) to monitor the FAK and Src activity in live cells during the differentiation process. The results revealed that the FAK activity increased after the induction of differentiation, which peaked around 20--27 days after induction. Meanwhile, the Src activity decreased continuously for 27 days after induction. Therefore, the results showed significant and differential changes of FAK and Src activity upon induction. This opposite trend between FAK and Src activation suggests novel and un-coupled Src/FAK functions during the osteoblastic differentiation process. These results should provide important information for the biochemical signals during the differentiation process of stem cells toward bone cells, which will advance our understanding of bone repair and tissue engineering.},
-  issn = {1932-6203},
-  doi = {10.1371/journal.pone.0042709},
-  opturl = {https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0042709},
-  opturl = {https://doi.org/10.1371/journal.pone.0042709},
-  file = {docs/Liao2012.pdf}
-}
-</pre>
-
-<a name="Seong2011"></a><pre>
-@article{<a href="publications.html#Seong2011">Seong2011</a>,
-  author = {Seong, Jihye
-and Ouyang, Mingxing
-and Kim, Taejin
-and Sun, Jie
-and Wen, Po-Chao
-and Lu, Shaoying
-and Zhuo, Yue
-and Llewellyn, Nicholas M.
-and Schlaepfer, David D.
-and Guan, Jun-Lin
-and Chien, Shu
-and Wang, Yingxiao},
-  title = {{D}etection of focal adhesion kinase activation at membrane microdomains by fluorescence resonance energy transfer},
-  journal = {Nature Communications},
-  year = {2011},
-  volume = {2},
-  pages = {406},
-  optkeywords = {Animals; Cell Adhesion; Cell Membrane/*chemistry/*enzymology/genetics; Enzyme Activation; Fluorescence Resonance Energy Transfer/*methods; Focal Adhesion Protein-Tyrosine Kinases/*chemistry/genetics/*metabolism; Mice; Knockout; Platelet-Derived Growth Factor/metabolism; Protein Structure; Tertiary},
-  abstract = {Proper subcellular localization of focal adhesion kinase (FAK) is crucial for many cellular processes. It remains, however, unclear how FAK activity is regulated at subcellular compartments. To visualize the FAK activity at different membrane microdomains, we develop a fluorescence resonance energy transfer (FRET)-based FAK biosensor, and target it into or outside of detergent-resistant membrane (DRM) regions at the plasma membrane. Here we show that, on cell adhesion to extracellular matrix proteins or stimulation by platelet-derived growth factor (PDGF), the FRET responses of DRM-targeting FAK biosensor are stronger than that at non-DRM regions, suggesting that FAK activation can occur at DRM microdomains. Further experiments reveal that the PDGF-induced FAK activation is mediated and maintained by Src activity, whereas FAK activation on cell adhesion is independent of, and in fact essential for the Src activation. Therefore, FAK is activated at membrane microdomains with distinct activation mechanisms in response to different physiological stimuli.},
-  issn = {2041-1723},
-  doi = {10.1038/ncomms1414},
-  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/21792185">http://www.ncbi.nlm.nih.gov/pubmed/21792185</a>},
-  opturl = {https://doi.org/10.1038/ncomms1414},
-  file = {docs/Seong2011.pdf}
-}
-</pre>
-
-<a name="Sun2012"></a><pre>
-@inproceedings{<a href="publications.html#Sun2012">Sun2012</a>,
-  author = {Sun, Jie
-and Lu, Shaoying
-and Ouyang, Mingxing
-and Lin, Li-Jung
-and Zhuo, Yue
-and Liu, Bo
-and Chan, Richard
-and Chien, Shu
-and Neel, Benjamin G.
-and Wang, Yingxiao},
-  title = {{C}ircuit algorithm of tunable intramolecular interactions embedded within {S}hp2 revealed by {FRET}},
-  booktitle = {{ACS} {N}ational {M}eeting {B}ook of {A}bstracts},
-  year = {2012},
-  volume = {243},
-  opturl = {https://www.researchgate.net/publication/296024466_Circuit_algorithm_of_tunable_intramolecular_interactions_embedded_within_Shp2_revealed_by_FRET}
+and Harley, Brendan A. C.
+and Cunningham, Brian T.},
+  title = {{P}hotonic crystal enhanced microscopy for imaging of live cell adhesion},
+  journal = {The Analyst},
+  year = {2013},
+  volume = {138},
+  number = {20},
+  pages = {5886--5894},
+  optkeywords = {Animals; Biosensing Techniques/*methods; Cell Adhesion/physiology; Cells; Cultured; *Chemotaxis/physiology; Crystallization/*methods; Mice; Microscopy; Confocal/methods; *Optical Phenomena; Stem Cells/chemistry/*cytology/physiology},
+  abstract = {A form of microscopy that utilizes a photonic crystal biosensor surface as a substrate for cell attachment enables label-free, quantitative, submicron resolution, time-resolved imaging of cell-surface interactions without cytotoxic staining agents or temporally-unstable fluorophores. Other forms of microscopy do not provide this direct measurement of live cell-surface attachment localization and strength that includes unique, dynamic morphological signatures critical to the investigation of important biological phenomena such as stem cell differentiation, chemotaxis, apoptosis, and metastasis. Here, we introduce Photonic Crystal Enhanced Microscopy (PCEM), and apply it to the study of murine dental stem cells to image the evolution of cell attachment and morphology during chemotaxis and drug-induced apoptosis. PCEM provides rich, dynamic information about the evolution of cell-surface attachment profiles over biologically relevant time-scales. Critically, this method retains the ability to monitor cell behavior with spatial resolution sufficient for observing both attachment footprints of filopodial extensions and intracellular attachment strength gradients.},
+  issn = {0003-2654},
+  doi = {10.1039/c3an01541f},
+  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/23971078">http://www.ncbi.nlm.nih.gov/pubmed/23971078</a>},
+  opturl = {https://doi.org/10.1039/c3an01541f},
+  file = {docs/Chen2013.pdf}
 }
 </pre>
 
@@ -418,19 +758,139 @@ and Wang, Yingxiao},
 }
 </pre>
 
-<a name="Sutton2009"></a><pre>
-@inproceedings{<a href="publications.html#Sutton2009">Sutton2009</a>,
-  author = {Sutton, Bradley P.
-and Zhuo, Yue},
-  title = {{S}usceptibility, echo time shifts, and {T}2* considerations for functional magnetic resonance imaging},
-  booktitle = {2009 {IEEE} {I}nternational {S}ymposium on {B}iomedical {I}maging: {F}rom {N}ano to {M}acro},
-  year = {2009},
-  pages = {710--713},
-  optkeywords = {biomedical MRI; blood; brain; data acquisition; magnetic susceptibility; echo time shifts; T2* considerations; functional magnetic resonance imaging; magnetic susceptibility difference; air-tissue interface; ventral brain; field inhomogeneity; image artifacts; gradients echo acquisition; effective k-space trajectory; R2* decay map; blood oxygenation level dependent fMRI; Magnetic resonance imaging; Magnetic fields; Pixel; Magnetic properties; Tellurium; Spirals; Magnetic field measurement; Biomedical engineering; Echo time shift; BOLD fMRI},
-  abstract = {Magnetic susceptibility differences exist near the interface of air/tissue in the ventral brain in fMRI (functional magnetic resonance imaging). These susceptibility differences will not only cause field inhomogeneity and its gradients which will result in image artifacts, but also cause shifts in the echo time for gradients echo acquisitions. The echo time shifts are caused by shifts in the effective k-space trajectory due to the gradients of the field inhomogeneity. Previous work has shown and validated methods for estimating the echo time shift based on the effective k-space trajectory. In this work, we demonstrate that accurate estimation of the R2* decay map (R2*=1/T2*) not only need to account for the field map and its gradients, but also needs to include the echo time shift. These changes in T2* sensitivity are directly related to changes in sensitivity in BOLD (blood oxygenation level dependent) fMRI studies.},
-  doi = {10.1109/ISBI.2009.5193146},
-  opturl = {https://doi.org/10.1109/ISBI.2009.5193146},
-  file = {docs/Sutton2009.pdf}
+<a name="Zhuo2012"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2012">Zhuo2012</a>,
+  author = {Zhuo, Yue
+and Qian, Tongcheng
+and Lu, Shaoying
+and Wang, Yingxiao},
+  title = {{S}rc {A}ctivity {D}ynamic {D}etection {I}n {T}he {I}nitiation {O}f {T}ension-released {C}ell {M}igration},
+  booktitle = {{BMES}},
+  year = {2012},
+  abstract = {Cell migration is critical for embryonic development, wound healing and cancer metastasis. Protein tyrosine kinase Src plays important roles in cell migration and thus it is important to understand how molecular signals of Src regulate cellular migration and function. Here we present a live cell imaging and analysis system to observe and quantify the coupling between molecular activities and the initiation of migration. This system combines three technologies, including micro-pattern, genetic encoded fluorescent biosensor based on fluorescence resonant energy transfer (FRET) and automated analysis. This system allowed the detection of down-regulation of Src activity coupled with the membrane protrusion at cell front when migration was initiated.},
+  opturl = {https://www.bmes.org/files/Annual\%20Meeting\%20Program\%20Guides/2012AnnualMeetingProgram.pdf},
+  file = {docs/Zhuo2012.pdf}
+}
+</pre>
+
+<a name="Sun2012"></a><pre>
+@inproceedings{<a href="publications.html#Sun2012">Sun2012</a>,
+  author = {Sun, Jie
+and Lu, Shaoying
+and Ouyang, Mingxing
+and Lin, Li-Jung
+and Zhuo, Yue
+and Liu, Bo
+and Chan, Richard
+and Chien, Shu
+and Neel, Benjamin G.
+and Wang, Yingxiao},
+  title = {{C}ircuit algorithm of tunable intramolecular interactions embedded within {S}hp2 revealed by {FRET}},
+  booktitle = {{ACS} {N}ational {M}eeting {B}ook of {A}bstracts},
+  year = {2012},
+  volume = {243},
+  opturl = {https://www.researchgate.net/publication/296024466_Circuit_algorithm_of_tunable_intramolecular_interactions_embedded_within_Shp2_revealed_by_FRET}
+}
+</pre>
+
+<a name="Liao2012"></a><pre>
+@article{<a href="publications.html#Liao2012">Liao2012</a>,
+  author = {Liao, Xiaoling
+and Lu, Shaoying
+and Zhuo, Yue
+and Winter, Christina
+and Xu, Wenfeng
+and Wang, Yingxiao},
+  title = {{V}isualization of {S}rc and {FAK} {A}ctivity during the {D}ifferentiation {P}rocess from {HMSC}s to {O}steoblasts ({S}rc and {FAK} {A}ctivity during {D}ifferentiation)},
+  journal = {PloS one},
+  year = {2012},
+  publisher = {Public Library of Science},
+  address = {San Francisco, USA},
+  volume = {7},
+  number = {8},
+  pages = {e42709},
+  optkeywords = {Research Article; Biology; Physiology; Biotechnology; Developmental Biology},
+  abstract = {Non-receptor protein kinases FAK and Src play crucial roles in regulating cellular adhesions, growth, migration and differentiation. However, it remains unclear how the activity of FAK and Src is regulated during the differentiation process from mesenchymal stem cells (MSCs) to bone cells. In this study, we used genetically encoded FAK and Src biosensors based on fluorescence resonance energy transfer (FRET) to monitor the FAK and Src activity in live cells during the differentiation process. The results revealed that the FAK activity increased after the induction of differentiation, which peaked around 20--27 days after induction. Meanwhile, the Src activity decreased continuously for 27 days after induction. Therefore, the results showed significant and differential changes of FAK and Src activity upon induction. This opposite trend between FAK and Src activation suggests novel and un-coupled Src/FAK functions during the osteoblastic differentiation process. These results should provide important information for the biochemical signals during the differentiation process of stem cells toward bone cells, which will advance our understanding of bone repair and tissue engineering.},
+  issn = {1932-6203},
+  doi = {10.1371/journal.pone.0042709},
+  opturl = {https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0042709},
+  opturl = {https://doi.org/10.1371/journal.pone.0042709},
+  file = {docs/Liao2012.pdf}
+}
+</pre>
+
+<a name="Zhuo2011"></a><pre>
+@inbook{<a href="publications.html#Zhuo2011">Zhuo2011</a>,
+  author = {Zhuo, Yue
+and Wu, Xiao-Long
+and Haldar, Justin P.
+and Marin, Thibault
+and Hwu, Wen-mei W.
+and Liang, Zhi-Pei
+and Sutton, Bradley P.},
+  title = {{U}sing {GPU}s to {A}ccelerate {A}dvanced {MRI} {R}econstruction with {F}ield {I}nhomogeneity {C}ompensation},
+  booktitle = {GPU Computing Gems},
+  year = {2011},
+  publisher = {Elsevier Science},
+  isbn = {9780123849885},
+  doi = {10.1016/B978-0-12-384988-5.00044-9},
+  opturl = {https://www.sciencedirect.com/science/article/pii/B9780123849885000449},
+  opturl = {https://doi.org/10.1016/B978-0-12-384988-5.00044-9},
+  file = {docs/Zhuo2011.pdf}
+}
+</pre>
+
+<a name="Liao2011"></a><pre>
+@article{<a href="publications.html#Liao2011">Liao2011</a>,
+  author = {Liao, Xiaoling
+and Lu, Shaoying
+and Zhuo, Yue
+and Winter, Christina
+and Xu, Wenfeng
+and Li, Bo
+and Wang, Yingxiao},
+  title = {{B}one {P}hysiology, {B}iomaterial and the {E}ffect of {M}echanical/{P}hysical {M}icroenvironment on {MSC} {O}steogenesis: {A} {T}ribute to {S}hu {C}hien{\textquoteright}s 80th {B}irthday},
+  journal = {Cellular and Molecular Bioengineering},
+  year = {2011},
+  volume = {4},
+  number = {4},
+  pages = {579--590},
+  optkeywords = {Bone cells; Bone repair; Mechanical Environment; Tissue engineering; scaffolds},
+  abstract = {Professor Shu Chien is a world-renowned leader and founder of Bioengineering. In particular, he has made seminal contributions to advancing our systematic and insightful understanding of how cells perceive their physical/mechanical environment and coordinate cellular functions. In this review, as part of a tribute to Prof. Shu Chien{\textquoteright}s scientific achievement, we summarize the research progress in understanding the physiology of bone cells interacting with different mechanical/physical environments during bone tissue regeneration/repair. We first introduce the cellular composition of the bone tissue and the mechanism of the physiological bone regeneration/repair process. We then describe the properties and development of biomaterials for bone tissue engineering, followed by the highlighting of research progresses on the cellular response to mechanical environmental cues. Finally, several latest advancements in bone tissue regeneration and remaining challenges in the field are discussed for future research directions.},
+  issn = {1865-5025},
+  doi = {10.1007/s12195-011-0204-9},
+  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/25580165">http://www.ncbi.nlm.nih.gov/pubmed/25580165</a>},
+  opturl = {https://doi.org/10.1007/s12195-011-0204-9},
+  file = {docs/Liao2011.pdf}
+}
+</pre>
+
+<a name="Seong2011"></a><pre>
+@article{<a href="publications.html#Seong2011">Seong2011</a>,
+  author = {Seong, Jihye
+and Ouyang, Mingxing
+and Kim, Taejin
+and Sun, Jie
+and Wen, Po-Chao
+and Lu, Shaoying
+and Zhuo, Yue
+and Llewellyn, Nicholas M.
+and Schlaepfer, David D.
+and Guan, Jun-Lin
+and Chien, Shu
+and Wang, Yingxiao},
+  title = {{D}etection of focal adhesion kinase activation at membrane microdomains by fluorescence resonance energy transfer},
+  journal = {Nature Communications},
+  year = {2011},
+  volume = {2},
+  pages = {406},
+  optkeywords = {Animals; Cell Adhesion; Cell Membrane/*chemistry/*enzymology/genetics; Enzyme Activation; Fluorescence Resonance Energy Transfer/*methods; Focal Adhesion Protein-Tyrosine Kinases/*chemistry/genetics/*metabolism; Mice; Knockout; Platelet-Derived Growth Factor/metabolism; Protein Structure; Tertiary},
+  abstract = {Proper subcellular localization of focal adhesion kinase (FAK) is crucial for many cellular processes. It remains, however, unclear how FAK activity is regulated at subcellular compartments. To visualize the FAK activity at different membrane microdomains, we develop a fluorescence resonance energy transfer (FRET)-based FAK biosensor, and target it into or outside of detergent-resistant membrane (DRM) regions at the plasma membrane. Here we show that, on cell adhesion to extracellular matrix proteins or stimulation by platelet-derived growth factor (PDGF), the FRET responses of DRM-targeting FAK biosensor are stronger than that at non-DRM regions, suggesting that FAK activation can occur at DRM microdomains. Further experiments reveal that the PDGF-induced FAK activation is mediated and maintained by Src activity, whereas FAK activation on cell adhesion is independent of, and in fact essential for the Src activation. Therefore, FAK is activated at membrane microdomains with distinct activation mechanisms in response to different physiological stimuli.},
+  issn = {2041-1723},
+  doi = {10.1038/ncomms1414},
+  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/21792185">http://www.ncbi.nlm.nih.gov/pubmed/21792185</a>},
+  opturl = {https://doi.org/10.1038/ncomms1414},
+  file = {docs/Seong2011.pdf}
 }
 </pre>
 
@@ -510,343 +970,24 @@ and Beretta, Giordano B.},
 }
 </pre>
 
-<a name="Zhuo2016a"></a><pre>
-@inbook{<a href="publications.html#Zhuo2016a">Zhuo2016a</a>,
+<a name="Zhuo2010"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2010">Zhuo2010</a>,
   author = {Zhuo, Yue
-and Cunningham, Brian T.},
-  title = {{L}abel-{F}ree {B}iosensor {I}maging on {P}hotonic {C}rystal {S}urfaces ({C}hpater 2)},
-  booktitle = {Label-Free Sensing},
-  year = {2016},
-  pages = {31--55},
-  isbn = {978-3-03842-211-2},
-  opturl = {https://www.mdpi.com/journal/biosensors/special_issues/Label_free_biosensing},
-  file = {docs/Zhuo2016a.pdf}
-}
-</pre>
-
-<a name="Zhuo2018b"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2018b">Zhuo2018b</a>,
-  author = {Zhuo, Yue
-and Choi, Ji Sun
-and Marin, Thibault
-and Yu, Hojeong
-and Harley, Brendan A.
-and Cunningham, Brian T.},
-  title = {{S}tem {C}ell {A}dhesion {I}maging with {P}hotonic {R}esonator {O}utcoupler {M}icroscopy ({PROM})},
-  booktitle = {{B}iomedical {E}ngineering {S}ociety {A}nnual {M}eeting},
-  year = {2018},
-  abstract = {Focal adhesions (FAs) are critical cellular membrane components that regulate cell adhesion and migration [1]. We developed a label-free imaging biosensor approach, named Photonic Resonator Outcoupler Microscopy (PROM), for dynamic, long-term, quantitative imaging of cell-surface interactions [2-7]. Our measurements show that membrane-associated adhesion protein aggregates scatter photons from the resonant electromagnetic standing wave on a photonic crystal surface, resulting in a highly localized reduction of the reflected light intensity.},
-  file = {docs/Zhuo2018b.pdf}
-}
-</pre>
-
-<a name="Zhuo2018a"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2018a">Zhuo2018a</a>,
-  author = {Zhuo, Yue
-and Choi, Ji Sun
-and Marin, Thibault
-and Yu, Hojeong
-and Harley, Brendan A.
-and Cunningham, Brian T.},
-  title = {{P}hotonic {R}esonator {O}utcoupler {M}icroscopy ({PROM}) for {Q}uantitative {M}onitoring of {S}tem {C}ell {F}ocal {A}dhesion {A}rea},
-  booktitle = {{F}rontiers in {O}ptics},
-  year = {2018},
-  publisher = {Optical Society of America},
-  pages = {JTu3A.119},
-  abstract = {We developed a novel label-free imaging approach, named Photonic Resonator Outcoupler Microscopy (PROM) utilizing the reduction of the peak-resonance intensity reflected from a photonic crystal surface. PROM can monitor the variation of focal adhesion areas in live cells dynamically and quantitatively for extended time.},
-  isbn = {978-1-943580-46-0},
-  doi = {10.1364/FIO.2018.JTu3A.119},
-  opturl = {https://www.osapublishing.org/abstract.cfm?uri=FiO-2018-JTu3A.119},
-  opturl = {https://doi.org/10.1364/FIO.2018.JTu3A.119},
-  file = {docs/Zhuo2018a.pdf}
-}
-</pre>
-
-<a name="Zhuo2018"></a><pre>
-@article{<a href="publications.html#Zhuo2018">Zhuo2018</a>,
-  author = {Zhuo, Yue
-and Choi, Ji Sun
-and Marin, Thibault
-and Yu, Hojeong
-and Harley, Brendan A.
-and Cunningham, Brian T.},
-  title = {{Q}uantitative analysis of focal adhesion dynamics using photonic resonator outcoupler microscopy ({PROM})},
-  journal = {Light: Science {\&} Applications},
-  year = {2018},
-  volume = {7},
-  number = {1},
-  pages = {9},
-  abstract = {Focal adhesions are critical cell membrane components that regulate adhesion and migration and have cluster dimensions that correlate closely with adhesion engagement and migration speed. We utilized a label-free approach for dynamic, long-term, quantitative imaging of cell--surface interactions called photonic resonator outcoupler microscopy (PROM) in which membrane-associated protein aggregates outcoupled photons from the resonant evanescent field of a photonic crystal biosensor, resulting in a highly localized reduction of the reflected light intensity. By mapping the changes in the resonant reflected peak intensity from the biosensor surface, we demonstrate the ability of PROM to detect focal adhesion dimensions. Similar spatial distributions can be observed between PROM images and fluorescence-labeled images of focal adhesion areas in dental epithelial stem cells. In particular, we demonstrate that cell--surface contacts and focal adhesion formation can be imaged by two orthogonal label-free modalities in PROM simultaneously, providing a general-purpose tool for kinetic, high axial-resolution monitoring of cell interactions with basement membranes.},
-  issn = {2047-7538},
-  doi = {10.1038/s41377-018-0001-5},
-  opturl = {https://doi.org/10.1038/s41377-018-0001-5},
-  file = {docs/Zhuo2018.pdf}
-}
-</pre>
-
-<a name="Zhuo2017a"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2017a">Zhuo2017a</a>,
-  author = {Zhuo, Yue
-and Choi, Ji Sun
-and Marin, Thibault
-and Yu, Hojeong
-and Harley, Brendan A.
-and Cunningham, Brian T.},
-  title = {{Q}uantitative {L}abel-free {I}maging of {L}ive-cell {A}dhesion {U}sing {P}hotonic {C}rystal {E}nhanced {M}icroscopy ({PCEM})},
-  booktitle = {{C}onference on {L}asers and {E}lectro-{O}ptics ({CLEO})},
-  year = {2017},
-  abstract = {To quantify live-cell adhesion, a photonic crystal biosensor surface with an extracellular matrix coating is monitored within a PCEM instrument to dynamically image changes in attached cell mass-density during live-cell attachment, spreading, and drug response.},
-  isbn = {978-1-5386-2019-9},
-  doi = {10.1364/CLEO_SI.2017.SM1C.2},
-  opturl = {https://doi.org/10.1364/CLEO_SI.2017.SM1C.2},
-  file = {docs/Zhuo2017a.pdf}
-}
-</pre>
-
-<a name="Zhuo2017"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2017">Zhuo2017</a>,
-  author = {Zhuo, Yue
-and Choi, Ji Sun
-and Marin, Thibault
-and Yu, Hojeong
-and Harley, Brendan A.
-and Cunningham, Brian T.},
-  title = {{C}ell {A}dhesion {P}henotype {L}ibrary with {P}hotonic {C}rystal {E}nhanced {M}icroscopy},
-  booktitle = {{O}ptics in the {L}ife {S}ciences {C}ongress},
-  year = {2017},
-  pages = {BoS2A7},
-  abstract = {We apply PCEM to investigate adhesion of different types of cells as a cell adhesion phenotype library. PCEM imaging provides a new tool to gain a deeper understanding of the fundamental mechanisms involved with cell-adhesion.},
-  doi = {10.1364/BODA.2017.BoS2A.7},
-  opturl = {https://doi.org/10.1364/BODA.2017.BoS2A.7},
-  file = {docs/Zhuo2017.pdf}
-}
-</pre>
-
-<a name="Zhuo2017b"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2017b">Zhuo2017b</a>,
-  author = {Zhuo, Yue
-and Choi, Ji Sun
-and Marin, Thibault
-and Yu, Hojeong
-and Harley, Brendan A.
-and Cunningham, Brian T.},
-  title = {{L}abel-free {I}maging of {S}tem {C}ell {A}dhesion and {D}ynamic {T}racking of {B}oundary {E}volution {U}sing {P}hotonic {C}rystal {E}nhanced {M}icroscopy ({PCEM})},
-  booktitle = {{P}roceedings of {M}icroscopy {\&} {M}icroanalysis},
-  year = {2017},
-  volume = {23},
-  pages = {1142--1143},
-  abstract = {Cell adhesion provides structural support and contributes to functional processes crucial for cellular proliferation and survival. We apply a new form of label-free biosensor imaging called Photonic Crystal Enhanced Microscopy (PCEM) to investigate adhesion/migration of stem cells [1-4]. By applying image processing algorithms to analyze the PCEM images, we offer insight into how the cellular membrane is dynamically organized during cell adhesion.},
-  doi = {10.1017/S1431927617006377},
-  opturl = {https://www.cambridge.org/core/journals/microscopy-and-microanalysis/article/labelfree-imaging-of-stem-cell-adhesion-and-dynamic-tracking-of-boundary-evolution-using-photonic-crystal-enhanced-microscopy-pcem/C54B2C17D8D358188F5A0D74BD4A4651},
-  opturl = {https://doi.org/10.1017/S1431927617006377},
-  file = {docs/Zhuo2017b.pdf}
-}
-</pre>
-
-<a name="Zhuo2016b"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2016b">Zhuo2016b</a>,
-  author = {Zhuo, Yue
-and Choi, Ji Sun
-and Marin, Thibault
-and Yu, Hojeong
-and Harley, Brendan A.
-and Cunningham, Brian T.},
-  title = {{P}hotonic {C}rystal {E}nhanced {M}icroscopy ({PCEM}) for {M}ultimode {D}ynamic {Q}uantitative {I}maging of {C}ell {A}dhesion},
-  booktitle = {{I}nternational {E}ngineering in {M}edicine and {B}iology {C}onference ({EMBC})},
-  year = {2016},
-  abstract = {We describe a novel label-free biosensor imaging modality within Photonic Crystal Enhanced Microscopy in which cell membrane components locally reduce resonantreflection efficiency through photon out-scattering caused by protein clusters within focal adhesion sites.},
-  file = {docs/Zhuo2016b.pdf}
-}
-</pre>
-
-<a name="Zhuo2016"></a><pre>
-@article{<a href="publications.html#Zhuo2016">Zhuo2016</a>,
-  author = {Zhuo, Yue
-and Choi, Ji Sun
-and Marin, Thibault
-and Yu, Hojeong
-and Harley, Brendan A.
-and Cunningham, Brian T.},
-  title = {{Q}uantitative imaging of cell membrane-associated effective mass density using {P}hotonic {C}rystal {E}nhanced {M}icroscopy ({PCEM})},
-  journal = {Progress in Quantum Electronics},
-  year = {2016},
-  volume = {50},
-  pages = {1--18},
-  optkeywords = {photonic crystal enhanced microscopy (PCEM); photonic crystal (PC); photonic crystal slab; photonic crystal biosensor; live cell imaging; label-free imaging; stem cell; cancer cell; refractive index (RI); peak wavelength value (PWV); peak wavelength shift (PWS); mass density (MD); cell membrane-associated effective mass density},
-  abstract = {Adhesion is a critical cellular process that contributes to migration, apoptosis, differentiation, and division. It is followed by the redistribution of cellular materials at the cell membrane or at the cell-surface interface for cells interacting with surfaces, such as basement membranes. Dynamic and quantitative tracking of changes in cell adhesion mass redistribution is challenging because cells are rapidly moving, inhomogeneous, and nonequilibrium objects, whose physical and mechanical properties are difficult to measure or predict. Here, we report a novel biosensor based microscopy approach termed Photonic Crystal Enhanced Microscopy (PCEM) that enables the movement of cellular materials at the plasma membrane of individual live cells to be dynamically monitored and quantitatively imaged. PCEM utilizes a photonic crystal biosensor surface, which can be coated with arbitrary extracellular matrix materials to facilitate cellular interactions, within a modified brightfield microscope with a low intensity non-coherent light source. Benefiting from the high sensitivity, narrow resonance peak, and tight spatial confinement of the evanescent field atop the photonic crystal biosensor, PCEM enables label-free live cell imaging with high sensitivity and high lateral and axial spatial-resolution, thereby allowing dynamic adhesion phenotyping of single cells without the use of fluorescent tags or stains. We apply PCEM to investigate adhesion and the early stage migration of different types of stem cells and cancer cells. By applying image processing algorithms to analyze the complex spatiotemporal information generated by PCEM, we offer insight into how the plasma membrane of anchorage dependent cells is dynamically organized during cell adhesion. The imaging and analysis results presented here provide a new tool for biologists to gain a deeper understanding of the fundamental mechanisms involved with cell adhesion and concurrent or subsequent migration events.},
-  doi = {10.1016/j.pquantelec.2016.10.001},
-  opturl = {https://doi.org/10.1016/j.pquantelec.2016.10.001},
-  file = {docs/Zhuo2016.pdf}
-}
-</pre>
-
-<a name="Zhuo2015b"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2015b">Zhuo2015b</a>,
-  author = {Zhuo, Yue
-and Choi, Ji Sun
-and Yu, Hojeong
-and Harley, Brendan A.
-and Cunningham, Brian T.},
-  title = {{D}ynamic label-free imaging of live-cell adhesion using photonic crystal enhanced microscopy ({PCEM})},
-  booktitle = {{C}onference on {L}asers and {E}lectro-{O}ptics ({CLEO})},
-  series = {2015 Conference on Lasers and Electro-Optics (CLEO)},
-  year = {2015},
-  pages = {1--2},
-  optkeywords = {adhesion; biological techniques; biomechanics; biosensors; cell motility; optical images; optical microscopy; optical sensors; photonic crystals; dynamic label-free imaging; live-cell adhesion; photonic crystal enhanced microscopy; cell attachment; photonic-crystal biosensor surface; live-cell movement; spatiotemporal-distribution; cellular material; Adhesives; Imaging; Stem cells; Optical surface waves; Image color analysis},
-  abstract = {We demonstrate label-free imaging of cell attachment upon a photonic-crystal biosensor surface. Newly-implemented PCEM image-analysis software is used to dynamically visualize individual live-cell movement and demonstrate the spatiotemporal-distribution of cellular material during adhesion and motion.},
-  isbn = {978-1-55752-968-8},
-  issn = {2160-8989},
-  opturl = {https://ieeexplore.ieee.org/document/7184049},
-  file = {docs/Zhuo2015b.pdf}
-}
-</pre>
-
-<a name="Zhuo2015c"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2015c">Zhuo2015c</a>,
-  author = {Zhuo, Yue
-and Choi, Ji Sun
-and Yu, Hojeong
-and Harley, Brendan A.
-and Cunningham, Brian T.},
-  title = {{S}urface {A}ttachment {P}rofiling of {S}tem {C}ell {D}ifferentiation {U}sing {P}hotonic {C}rystal {E}nhanced {M}icroscopy ({PCEM})},
-  booktitle = {{T}he {A}merican {S}ociety of {M}echanical {E}ngineers -- {N}ano{E}ngineering for {M}edicine and {B}iology ({ASME}-{NEMB})},
-  year = {2015},
-  file = {docs/Zhuo2015c.pdf}
-}
-</pre>
-
-<a name="Zhuo2015a"></a><pre>
-@article{<a href="publications.html#Zhuo2015a">Zhuo2015a</a>,
-  author = {Zhuo, Yue
-and Cunningham, Brian T.},
-  title = {{L}abel-{F}ree {B}iosensor {I}maging on {P}hotonic {C}rystal {S}urfaces},
-  journal = {Sensors (Basel, Switzerland)},
-  year = {2015},
-  volume = {15},
-  number = {9},
-  pages = {21613--21635},
-  optkeywords = {*Biocompatible Materials; Biosensing Techniques/*methods; Equipment Design; *Nanoparticles; *Photons; Protein Binding; biomaterial detection; label-free bioimaging; live cell imaging; nanoparticle detection; nanophotonics; photonic crystal; photonic crystal biosensor; photonic crystal enhanced fluorescence (PCEF); photonic crystal enhanced microscopy (PCEM); photonic crystal surface; protein-protein binding detection},
-  abstract = {We review the development and application of nanostructured photonic crystal surfaces and a hyperspectral reflectance imaging detection instrument which, when used together, represent a new form of optical microscopy that enables label-free, quantitative, and kinetic monitoring of biomaterial interaction with substrate surfaces. Photonic Crystal Enhanced Microscopy (PCEM) has been used to detect broad classes of materials which include dielectric nanoparticles, metal plasmonic nanoparticles, biomolecular layers, and live cells. Because PCEM does not require cytotoxic stains or photobleachable fluorescent dyes, it is especially useful for monitoring the long-term interactions of cells with extracellular matrix surfaces. PCEM is only sensitive to the attachment of cell components within {\textasciitilde}200 nm of the photonic crystal surface, which may correspond to the region of most interest for adhesion processes that involve stem cell differentiation, chemotaxis, and metastasis. PCEM has also demonstrated sufficient sensitivity for sensing nanoparticle contrast agents that are roughly the same size as protein molecules, which may enable applications in {\textquoteleft}{\textquoteleft}digital{\textquoteright}{\textquoteright} diagnostics with single molecule sensing resolution. We will review PCEM{\textquoteright}s development history, operating principles, nanostructure design, and imaging modalities that enable tracking of optical scatterers, emitters, absorbers, and centers of dielectric permittivity.},
-  issn = {1424-8220},
-  doi = {10.3390/s150921613},
-  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/26343684">http://www.ncbi.nlm.nih.gov/pubmed/26343684</a>},
-  opturl = {https://doi.org/10.3390/s150921613},
-  file = {docs/Zhuo2015a.pdf}
-}
-</pre>
-
-<a name="Zhuo2014b"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2014b">Zhuo2014b</a>,
-  author = {Zhuo, Yue
-and Hu, Huan
-and Chen, Weili
-and Lu, Meng
-and Tian, Limei
-and Yu, Hojeong
-and Long, Kenneth D.
-and Chow, Edmond
-and King, William P.
-and Singamaneni, Srikanth
-and Cunningham, Brian T.},
-  title = {{D}etection of single nanoparticles using photonic crystal enhanced microscopy},
-  booktitle = {2014 {C}onference on {L}asers and {E}lectro-{O}ptics ({CLEO}) -- {L}aser {S}cience to {P}hotonic {A}pplications},
-  year = {2014},
-  pages = {1--2},
-  optkeywords = {biomedical optical imaging; biosensors; nanomedicine; nanoparticles; nanosensors; optical microscopy; optical sensors; photonic crystals; plasmons; single nanoparticle detection; photonic crystal-enhanced microscopy; label-free biosensor imaging approach; photonic-crystal surface; nanoparticle plasmon resonant-frequency; photonic-crystal resonance; Optical surface waves; Surface waves; Educational institutions},
-  abstract = {We demonstrate a label-free biosensor imaging approach that utilizes a photonic-crystal surface to detect attachment of individual nanoparticles down to ~65{\texttimes}30{\texttimes}30nm3. Matching nanoparticle plasmon resonant-frequency to the photonic-crystal resonance substantially increases sensitivity of the approach.},
-  issn = {2160-8989},
-  doi = {10.1364/CLEO_SI.2014.SM4P.6},
-  opturl = {https://doi.org/10.1364/CLEO_SI.2014.SM4P.6},
-  file = {docs/Zhuo2014b.pdf}
-}
-</pre>
-
-<a name="Zhuo2014"></a><pre>
-@article{<a href="publications.html#Zhuo2014">Zhuo2014</a>,
-  author = {Zhuo, Yue
-and Hu, Huan
-and Chen, Weili
-and Lu, Meng
-and Tian, Limei
-and Yu, Hojeong
-and Long, Kenneth D.
-and Chow, Edmond
-and King, William P.
-and Singamaneni, Srikanth
-and Cunningham, Brian T.},
-  title = {{S}ingle nanoparticle detection using photonic crystal enhanced microscopy},
-  journal = {The Analyst},
-  year = {2014},
-  volume = {139},
-  number = {5},
-  pages = {1007--1015},
-  optkeywords = {Biosensing Techniques/*methods; Crystallization/*methods; Microscopy/methods; Nanoparticles/*analysis; *Photons},
-  abstract = {We demonstrate a label-free biosensor imaging approach that utilizes a photonic crystal (PC) surface to detect surface attachment of individual dielectric and metal nanoparticles through measurement of localized shifts in the resonant wavelength and resonant reflection magnitude from the PC. Using a microscopy-based approach to scan the PC resonant reflection properties with 0.6 mum spatial resolution, we show that metal nanoparticles attached to the biosensor surface with strong absorption at the resonant wavelength induce a highly localized reduction in reflection efficiency and are able to be detected by modulation of the resonant wavelength. Experimental demonstrations of single-nanoparticle imaging are supported by finite-difference time-domain computer simulations. The ability to image surface-adsorption of individual nanoparticles offers a route to single molecule biosensing, in which the particles can be functionalized with specific recognition molecules and utilized as tags.},
-  issn = {0003-2654},
-  doi = {10.1039/c3an02295a},
-  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/24432353">http://www.ncbi.nlm.nih.gov/pubmed/24432353</a>},
-  opturl = {https://doi.org/10.1039/c3an02295a},
-  file = {docs/Zhuo2014.pdf}
-}
-</pre>
-
-<a name="Zhuo2019"></a><pre>
-@article{<a href="publications.html#Zhuo2019">Zhuo2019</a>,
-  author = {Zhuo, Yue
-and Hu, Huan
-and Wang, Yifei
-and Marin, Thibault
-and Lu, Meng},
-  title = {{P}hotonic crystal slab biosensors fabricated with helium ion lithography ({HIL})},
-  journal = {Sensors and Actuators A: Physical},
-  year = {2019},
-  volume = {297},
-  pages = {111493},
-  issn = {0924-4247},
-  doi = {10.1016/j.sna.2019.07.017},
-  opturl = {https://linkinghub.elsevier.com/retrieve/pii/S0924424719305217},
-  opturl = {https://doi.org/10.1016/j.sna.2019.07.017},
-  file = {docs/Zhuo2019.pdf}
-}
-</pre>
-
-<a name="Zhuo2012"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2012">Zhuo2012</a>,
-  author = {Zhuo, Yue
-and Qian, Tongcheng
-and Lu, Shaoying
-and Wang, Yingxiao},
-  title = {{S}rc {A}ctivity {D}ynamic {D}etection {I}n {T}he {I}nitiation {O}f {T}ension-released {C}ell {M}igration},
-  booktitle = {{BMES}},
-  year = {2012},
-  abstract = {Cell migration is critical for embryonic development, wound healing and cancer metastasis. Protein tyrosine kinase Src plays important roles in cell migration and thus it is important to understand how molecular signals of Src regulate cellular migration and function. Here we present a live cell imaging and analysis system to observe and quantify the coupling between molecular activities and the initiation of migration. This system combines three technologies, including micro-pattern, genetic encoded fluorescent biosensor based on fluorescence resonant energy transfer (FRET) and automated analysis. This system allowed the detection of down-regulation of Src activity coupled with the membrane protrusion at cell front when migration was initiated.},
-  opturl = {https://www.bmes.org/files/Annual\%20Meeting\%20Program\%20Guides/2012AnnualMeetingProgram.pdf},
-  file = {docs/Zhuo2012.pdf}
-}
-</pre>
-
-<a name="Zhuo2015"></a><pre>
-@article{<a href="publications.html#Zhuo2015">Zhuo2015</a>,
-  author = {Zhuo, Yue
-and Qian, Tongcheng
-and Wu, Yiqian
-and Seong, Jihye
-and Gong, Ya
-and Ma, Hongwei
-and Wang, Yingxiao
-and Lu, Shaoying},
-  title = {{S}ubcellular and {D}ynamic {C}oordination between {S}rc {A}ctivity and {C}ell {P}rotrusion in {M}icroenvironment},
-  journal = {Scientific Reports},
-  year = {2015},
-  volume = {5},
-  pages = {12963},
-  optkeywords = {Cell Movement/genetics; Cell Polarity/genetics; Cell Surface Extensions/genetics; Cellular Microenvironment/*genetics; Endothelial Cells/*cytology/metabolism; Fluorescence Resonance Energy Transfer; Humans; Neovascularization; Physiologic/genetics; Wound Healing/*genetics; src-Family Kinases/genetics/*metabolism},
-  abstract = {Migration of endothelial cells is essential for wound healing and angiogenesis. Src kinase activity plays important roles at the protrusions of migrating endothelial cells. However, the spatiotemporal coordination between Src kinase activity and the protrusion of cell edge remains unclear. Therefore, we investigate these coordinated molecular events at the initiation of cell migration, by integrating microfabrication, fluorescence resonance energy transfer (FRET)-based biosensors, and automated computational image analysis. We demonstrate that the physical release of restrictive micropattern triggered a significant decrease of Src activity at the protrusive edge of endothelial cells. Computational cross-correlation analysis reveals that the decrease of Src activity occurred earlier in time, and was well-coordinated with the protrusion of cell edge in polarized cells, but not in non-polarized cells. These results suggest that the spatiotemporal control of Src kinase activity is well-coordinated with cell polarization and protrusion in endothelial cells upon the release of physical constraint, as that experienced by endothelial cells sprouting from stiff tumor micro-environment during angiogenesis. Therefore, our integrative approach enabled the discovery of a new model where Src is de-activated in coordination with membrane protrusion, providing important insights into the regulation of endothelial migration and angiogenesis.},
-  issn = {2045-2322},
-  doi = {10.1038/srep12963},
-  opturl = {<a href="http://www.ncbi.nlm.nih.gov/pubmed/26261043">http://www.ncbi.nlm.nih.gov/pubmed/26261043</a>},
-  opturl = {https://doi.org/10.1038/srep12963},
-  file = {docs/Zhuo2015.pdf}
+and Wu, Xiao-Long
+and Haldar, Justin P.
+and Hwu, Wen-mei W.
+and Liang, Zhi-Pei
+and Sutton, Bradley P.},
+  title = {{S}parse regularization in {MRI} iterative reconstruction using {GPU}s},
+  booktitle = {2010 3rd {I}nternational {C}onference on {B}iomedical {E}ngineering and {I}nformatics},
+  year = {2010},
+  volume = {2},
+  pages = {578--582},
+  optkeywords = {biomedical MRI; image reconstruction; iterative methods; medical image processing; sparse matrices; sparse regularization; Mri; iterative reconstruction; Gpu; graphics processing unit; susceptibility-induced field inhomogeneity effects; quadratic regularization; Magnetic resonance imaging; Central Processing Unit; Reconstruction algorithms; Regularization; Sparse matrix; Graphics Processing Unit (GPU); Cuda; magnetic resonance imaging (MRI); biomedical optical imaging; biosensors; nanomedicine; nanoparticles; nanosensors; optical microscopy; optical sensors; photonic crystals; plasmons; single nanoparticle detection; photonic crystal-enhanced microscopy; label-free biosensor imaging approach; photonic-crystal surface; nanoparticle plasmon resonant-frequency; photonic-crystal resonance; Optical surface waves; Surface waves; Educational institutions},
+  abstract = {Regularization is a common technique used to improve image quality in inverse problems such as MR image reconstruction. In this work, we extend our previous Graphics Processing Unit (GPU) implementation of MR image reconstruction with compensation for susceptibility-induced field inhomogeneity effects by incorporating an additional quadratic regularization term. Regularization techniques commonly impose the prior information that MR images are relatively smooth by penalizing large changes in intensity between neighboring voxels. However, the associated computations often increase data access and the overall computational load, which can lead to slower image reconstruction. This motivates us to adopt a GPU-enabled implementation of spatial regularization using sparse matrices. This implementation enables the computations for the entire reconstruction procedure to be done on the GPU, which avoids the memory bandwidth bottlenecks associated with frequent communications between the GPU and CPU. Both the CPU and GPU code of this implementation will be available for release at the time of the conference.},
+  doi = {10.1109/BMEI.2010.5640008},
+  opturl = {https://doi.org/10.1109/BMEI.2010.5640008},
+  file = {docs/Zhuo2010.pdf}
 }
 </pre>
 
@@ -870,6 +1011,43 @@ and Sutton, Bradley P.},
   year = {2010},
   opturl = {https://pdfs.semanticscholar.org/888f/27835ccfc546b38697b493ba445e870d2819.pdf},
   file = {docs/Zhuo2010b.pdf}
+}
+</pre>
+
+<a name="Zhuo2010c"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2010c">Zhuo2010c</a>,
+  author = {Zhuo, Yue
+and Wu, Xiao-Long
+and Haldar, Justin P.
+and Hwu, Wen-mei W.
+and Liang, Zhi-Pei
+and Sutton, Bradley P.},
+  title = {{M}ulti-{GPU} {I}mplementation for {I}terative {MR} {I}mage {R}econstruction with {F}ield {C}orrection},
+  booktitle = {{ISMRM}},
+  year = {2010},
+  abstract = {Many  advanced  MRI  image  acquisition  and  reconstruction  methods  see  limited  application  due  to  high  computational  cost  in  MRI.  For  instance,  iterative reconstruction algorithms (e.g. non-Cartesian k-space trajectory, or magnetic field inhomogeneity compensation) can improve image quality but  suffer  from  low  reconstruction  speed.  General-purpose  computing  on  graphics  processing  units  (GPU)  have  demonstrated  significant performance  speedups  and  cost  reductions  in  science  and  engineering  applications.  In  fact,  GPU  can  offer  significant  speedup  due  to  MRI  parallelized-data  structure,  e.g.  multi-shots,  multi-coil,  multi-slice,  multi-time-point,  etc.  We  propose  an  implementation  of  iterative  MR  image  reconstruction  with  magnetic  field  inhomogeneity  compensation  on  multi-GPUs.  The  MR  image  model  is  based  on  non-Cartesian  trajectory  (i.e.  spiral) in k-space, and can compensate for both geometric distortion and some signal loss induced by susceptibility gradients.},
+  opturl = {https://www.semanticscholar.org/paper/Multi-GPU-Implementation-for-Iterative-MR-Image-Zhuo-Wu/3a4f5ef8217c02e29bbbfc8b4603ba58c964c97d},
+  file = {docs/Zhuo2010c.pdf}
+}
+</pre>
+
+<a name="Zhuo2010d"></a><pre>
+@inproceedings{<a href="publications.html#Zhuo2010d">Zhuo2010d</a>,
+  author = {Zhuo, Yue
+and Wu, Xiao-Long
+and Haldar, Justin P.
+and Hwu, Wen-mei W.
+and Liang, Zhi-Pei
+and Sutton, Bradley P.},
+  title = {{A}ccelerating iterative field-compensated {MR} image reconstruction on {GPU}s},
+  booktitle = {2010 {IEEE} {I}nternational {S}ymposium on {B}iomedical {I}maging: {F}rom {N}ano to {M}acro},
+  year = {2010},
+  pages = {820--823},
+  optkeywords = {biomedical MRI; brain; computer graphics; conjugate gradient methods; image reconstruction; medical image processing; neurophysiology; iterative field-compensated MR image reconstruction; graphics processing units; conjugate gradient algorithms; magnetic field inhomogeneity; susceptibility differences; air-tissue interface; human brain; orbitofrontal cortex; field inhomogeneity compensation; magnetic field map; parallel computational hardware; field inhomogeneity compensation technique; Nvida Cuda; compute unified device architecture; Acceleration; Iterative algorithms; Magnetic fields; Graphics; Magnetic resonance imaging; Brain modeling; Physics; Magnetic susceptibility; Humans; Mri; Gpu; Cuda; Conjugate Gradient; Iterative reconstruction; Field inhomogeneity},
+  abstract = {We propose a fast implementation for iterative MR image reconstruction using Graphics Processing Units (GPU). In MRI, iterative reconstruction with conjugate gradient algorithms allows for accurate modeling the physics of the imaging system. Specifically, methods have been reported to compensate for the magnetic field inhomogeneity induced by the susceptibility differences near the air/tissue interface in human brain (such as orbitofrontal cortex). Our group has previously presented an algorithm for field inhomogeneity compensation using magnetic field map and its gradients. However, classical iterative reconstruction algorithms are computationally costly, and thus significantly increase the computation time. To remedy this problem, one can utilize the fact that these iterative MR image reconstruction algorithms are highly parallelizable. Therefore, parallel computational hardware, such as GPU, can dramatically improve their performance. In this work, we present an implementation of our field inhomogeneity compensation technique using NVIDA CUDA(Compute Unified Device Architecture)-enabled GPU. We show that the proposed implementation significantly reduces the computation times around two orders of magnitude (compared with non-GPU implementation) while accurately compensating for field inhomogeneity.},
+  doi = {10.1109/ISBI.2010.5490112},
+  opturl = {https://doi.org/10.1109/ISBI.2010.5490112},
+  file = {docs/Zhuo2010d.pdf}
 }
 </pre>
 
@@ -911,6 +1089,22 @@ and Sutton, Bradley P.},
 }
 </pre>
 
+<a name="Sutton2009"></a><pre>
+@inproceedings{<a href="publications.html#Sutton2009">Sutton2009</a>,
+  author = {Sutton, Bradley P.
+and Zhuo, Yue},
+  title = {{S}usceptibility, echo time shifts, and {T}2* considerations for functional magnetic resonance imaging},
+  booktitle = {2009 {IEEE} {I}nternational {S}ymposium on {B}iomedical {I}maging: {F}rom {N}ano to {M}acro},
+  year = {2009},
+  pages = {710--713},
+  optkeywords = {biomedical MRI; blood; brain; data acquisition; magnetic susceptibility; echo time shifts; T2* considerations; functional magnetic resonance imaging; magnetic susceptibility difference; air-tissue interface; ventral brain; field inhomogeneity; image artifacts; gradients echo acquisition; effective k-space trajectory; R2* decay map; blood oxygenation level dependent fMRI; Magnetic resonance imaging; Magnetic fields; Pixel; Magnetic properties; Tellurium; Spirals; Magnetic field measurement; Biomedical engineering; Echo time shift; BOLD fMRI},
+  abstract = {Magnetic susceptibility differences exist near the interface of air/tissue in the ventral brain in fMRI (functional magnetic resonance imaging). These susceptibility differences will not only cause field inhomogeneity and its gradients which will result in image artifacts, but also cause shifts in the echo time for gradients echo acquisitions. The echo time shifts are caused by shifts in the effective k-space trajectory due to the gradients of the field inhomogeneity. Previous work has shown and validated methods for estimating the echo time shift based on the effective k-space trajectory. In this work, we demonstrate that accurate estimation of the R2* decay map (R2*=1/T2*) not only need to account for the field map and its gradients, but also needs to include the echo time shift. These changes in T2* sensitivity are directly related to changes in sensitivity in BOLD (blood oxygenation level dependent) fMRI studies.},
+  doi = {10.1109/ISBI.2009.5193146},
+  opturl = {https://doi.org/10.1109/ISBI.2009.5193146},
+  file = {docs/Sutton2009.pdf}
+}
+</pre>
+
 <a name="Zhuo2008"></a><pre>
 @inproceedings{<a href="publications.html#Zhuo2008">Zhuo2008</a>,
   author = {Zhuo, Yue
@@ -919,107 +1113,6 @@ and Sutton, Bradley P.},
   booktitle = {2008 {C}onference: {B}iomedical {E}ngineering {S}ociety ({BMES})},
   year = {2008},
   file = {docs/Zhuo2008.pdf}
-}
-</pre>
-
-<a name="Zhuo2014a"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2014a">Zhuo2014a</a>,
-  author = {Zhuo, Yue
-and Tian, Limei
-and Chen, Weili
-and Yu, Hojeong
-and Singamaneni, Srikanth
-and Cunningham, Brian T.},
-  title = {{P}rotein-protein binding detection with nanoparticle photonic crystal enhanced microscopy ({NP}-{PCEM})},
-  booktitle = {36th {A}nnual {I}nternational {C}onference of the {IEEE} {E}ngineering in {M}edicine and {B}iology {S}ociety},
-  year = {2014},
-  publisher = {IEEE},
-  pages = {2069--2072},
-  optkeywords = {adsorption; biochemistry; biosensors; finite difference time-domain analysis; molecular biophysics; nanobiotechnology; nanoparticles; nanosensors; photonic crystals; proteins; surface plasmon resonance; protein-protein binding detection; nanoparticle photonic crystal enhanced microscopy; Np-Pcem; microscopy-based biosensing approach; photonic crystal surface; PC surface; functionalized nanoparticles; localized shift measurement; resonant wavelength; resonant reflection magnitude; localized surface plasmon resonant frequency; PC biosensor; PCEM imaging; single nanoparticle resolution; finite-difference time-domain computer simulations; FDTD computer simulations; surface adsorption; Optical surface waves; Surface waves; Plasmons; Gold; Animals; Antibodies; Antigens; Computer Simulation; Crystallization; Electromagnetic Fields; Metal Nanoparticles; Microscopy; Photons; Protein Binding; Protein Interaction Mapping; Rabbits; Spectrophotometry; Ultraviolet},
-  abstract = {We demonstrate a novel microscopy-based biosensing approach that utilizes a photonic crystal (PC) surface to detect protein-protein binding with the functionalized nanoparticles as tags. This imaging approach utilizes the measurement of localized shifts in the resonant wavelength and resonant reflection magnitude from the PC biosensor in the presence of individual nanoparticles. Moreover, it substantially increases the sensitivity of the imaging approach through tunable localized surface plasmon resonant frequency of the nanoparticle matching with the resonance of the PC biosensor. Experimental demonstrations of photonic crystal enhanced microscopy (PCEM) imaging with single nanoparticle resolution are supported by Finite-Difference Time-Domain (FDTD) computer simulations. The ability to detect the surface adsorption of individual nanoparticles as tags offers a route to single molecule biosensing with photonic crystal biosensor in the future.},
-  isbn = {978-1-4244-7929-0},
-  doi = {10.1109/EMBC.2014.6944023},
-  opturl = {https://doi.org/10.1109/EMBC.2014.6944023},
-  file = {docs/Zhuo2014a.pdf}
-}
-</pre>
-
-<a name="Zhuo2010c"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2010c">Zhuo2010c</a>,
-  author = {Zhuo, Yue
-and Wu, Xiao-Long
-and Haldar, Justin P.
-and Hwu, Wen-mei W.
-and Liang, Zhi-Pei
-and Sutton, Bradley P.},
-  title = {{M}ulti-{GPU} {I}mplementation for {I}terative {MR} {I}mage {R}econstruction with {F}ield {C}orrection},
-  booktitle = {{ISMRM}},
-  year = {2010},
-  abstract = {Many  advanced  MRI  image  acquisition  and  reconstruction  methods  see  limited  application  due  to  high  computational  cost  in  MRI.  For  instance,  iterative reconstruction algorithms (e.g. non-Cartesian k-space trajectory, or magnetic field inhomogeneity compensation) can improve image quality but  suffer  from  low  reconstruction  speed.  General-purpose  computing  on  graphics  processing  units  (GPU)  have  demonstrated  significant performance  speedups  and  cost  reductions  in  science  and  engineering  applications.  In  fact,  GPU  can  offer  significant  speedup  due  to  MRI  parallelized-data  structure,  e.g.  multi-shots,  multi-coil,  multi-slice,  multi-time-point,  etc.  We  propose  an  implementation  of  iterative  MR  image  reconstruction  with  magnetic  field  inhomogeneity  compensation  on  multi-GPUs.  The  MR  image  model  is  based  on  non-Cartesian  trajectory  (i.e.  spiral) in k-space, and can compensate for both geometric distortion and some signal loss induced by susceptibility gradients.},
-  opturl = {https://www.semanticscholar.org/paper/Multi-GPU-Implementation-for-Iterative-MR-Image-Zhuo-Wu/3a4f5ef8217c02e29bbbfc8b4603ba58c964c97d},
-  file = {docs/Zhuo2010c.pdf}
-}
-</pre>
-
-<a name="Zhuo2010"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2010">Zhuo2010</a>,
-  author = {Zhuo, Yue
-and Wu, Xiao-Long
-and Haldar, Justin P.
-and Hwu, Wen-mei W.
-and Liang, Zhi-Pei
-and Sutton, Bradley P.},
-  title = {{S}parse regularization in {MRI} iterative reconstruction using {GPU}s},
-  booktitle = {2010 3rd {I}nternational {C}onference on {B}iomedical {E}ngineering and {I}nformatics},
-  year = {2010},
-  volume = {2},
-  pages = {578--582},
-  optkeywords = {biomedical MRI; image reconstruction; iterative methods; medical image processing; sparse matrices; sparse regularization; Mri; iterative reconstruction; Gpu; graphics processing unit; susceptibility-induced field inhomogeneity effects; quadratic regularization; Magnetic resonance imaging; Central Processing Unit; Reconstruction algorithms; Regularization; Sparse matrix; Graphics Processing Unit (GPU); Cuda; magnetic resonance imaging (MRI); biomedical optical imaging; biosensors; nanomedicine; nanoparticles; nanosensors; optical microscopy; optical sensors; photonic crystals; plasmons; single nanoparticle detection; photonic crystal-enhanced microscopy; label-free biosensor imaging approach; photonic-crystal surface; nanoparticle plasmon resonant-frequency; photonic-crystal resonance; Optical surface waves; Surface waves; Educational institutions},
-  abstract = {Regularization is a common technique used to improve image quality in inverse problems such as MR image reconstruction. In this work, we extend our previous Graphics Processing Unit (GPU) implementation of MR image reconstruction with compensation for susceptibility-induced field inhomogeneity effects by incorporating an additional quadratic regularization term. Regularization techniques commonly impose the prior information that MR images are relatively smooth by penalizing large changes in intensity between neighboring voxels. However, the associated computations often increase data access and the overall computational load, which can lead to slower image reconstruction. This motivates us to adopt a GPU-enabled implementation of spatial regularization using sparse matrices. This implementation enables the computations for the entire reconstruction procedure to be done on the GPU, which avoids the memory bandwidth bottlenecks associated with frequent communications between the GPU and CPU. Both the CPU and GPU code of this implementation will be available for release at the time of the conference.},
-  doi = {10.1109/BMEI.2010.5640008},
-  opturl = {https://doi.org/10.1109/BMEI.2010.5640008},
-  file = {docs/Zhuo2010.pdf}
-}
-</pre>
-
-<a name="Zhuo2010d"></a><pre>
-@inproceedings{<a href="publications.html#Zhuo2010d">Zhuo2010d</a>,
-  author = {Zhuo, Yue
-and Wu, Xiao-Long
-and Haldar, Justin P.
-and Hwu, Wen-mei W.
-and Liang, Zhi-Pei
-and Sutton, Bradley P.},
-  title = {{A}ccelerating iterative field-compensated {MR} image reconstruction on {GPU}s},
-  booktitle = {2010 {IEEE} {I}nternational {S}ymposium on {B}iomedical {I}maging: {F}rom {N}ano to {M}acro},
-  year = {2010},
-  pages = {820--823},
-  optkeywords = {biomedical MRI; brain; computer graphics; conjugate gradient methods; image reconstruction; medical image processing; neurophysiology; iterative field-compensated MR image reconstruction; graphics processing units; conjugate gradient algorithms; magnetic field inhomogeneity; susceptibility differences; air-tissue interface; human brain; orbitofrontal cortex; field inhomogeneity compensation; magnetic field map; parallel computational hardware; field inhomogeneity compensation technique; Nvida Cuda; compute unified device architecture; Acceleration; Iterative algorithms; Magnetic fields; Graphics; Magnetic resonance imaging; Brain modeling; Physics; Magnetic susceptibility; Humans; Mri; Gpu; Cuda; Conjugate Gradient; Iterative reconstruction; Field inhomogeneity},
-  abstract = {We propose a fast implementation for iterative MR image reconstruction using Graphics Processing Units (GPU). In MRI, iterative reconstruction with conjugate gradient algorithms allows for accurate modeling the physics of the imaging system. Specifically, methods have been reported to compensate for the magnetic field inhomogeneity induced by the susceptibility differences near the air/tissue interface in human brain (such as orbitofrontal cortex). Our group has previously presented an algorithm for field inhomogeneity compensation using magnetic field map and its gradients. However, classical iterative reconstruction algorithms are computationally costly, and thus significantly increase the computation time. To remedy this problem, one can utilize the fact that these iterative MR image reconstruction algorithms are highly parallelizable. Therefore, parallel computational hardware, such as GPU, can dramatically improve their performance. In this work, we present an implementation of our field inhomogeneity compensation technique using NVIDA CUDA(Compute Unified Device Architecture)-enabled GPU. We show that the proposed implementation significantly reduces the computation times around two orders of magnitude (compared with non-GPU implementation) while accurately compensating for field inhomogeneity.},
-  doi = {10.1109/ISBI.2010.5490112},
-  opturl = {https://doi.org/10.1109/ISBI.2010.5490112},
-  file = {docs/Zhuo2010d.pdf}
-}
-</pre>
-
-<a name="Zhuo2011"></a><pre>
-@inbook{<a href="publications.html#Zhuo2011">Zhuo2011</a>,
-  author = {Zhuo, Yue
-and Wu, Xiao-Long
-and Haldar, Justin P.
-and Marin, Thibault
-and Hwu, Wen-mei W.
-and Liang, Zhi-Pei
-and Sutton, Bradley P.},
-  title = {{U}sing {GPU}s to {A}ccelerate {A}dvanced {MRI} {R}econstruction with {F}ield {I}nhomogeneity {C}ompensation},
-  booktitle = {GPU Computing Gems},
-  year = {2011},
-  publisher = {Elsevier Science},
-  isbn = {9780123849885},
-  doi = {10.1016/B978-0-12-384988-5.00044-9},
-  opturl = {https://www.sciencedirect.com/science/article/pii/B9780123849885000449},
-  opturl = {https://doi.org/10.1016/B978-0-12-384988-5.00044-9},
-  file = {docs/Zhuo2011.pdf}
 }
 </pre>
 
