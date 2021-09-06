@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-25 Thu 02:34 -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 2021-09-06 Mon 03:46 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Curriculum Vitae</title>
-<meta name="generator" content="Org mode">
-<meta name="author" content="Yue Zhuo">
+<meta name="author" content="Yue Zhuo" />
+<meta name="generator" content="Org Mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -38,7 +38,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -50,7 +50,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -197,50 +197,26 @@
 	  title="RSS feed">
 <script type="text/javascript" src="js/menu_highlight.js"></script>
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 </head>
 <body>
@@ -258,8 +234,8 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">Curriculum Vitae</h1>
 
-<div class="figure">
-<p><img src="images/Bio_01_YueZhuo.jpg" alt="Bio_01_YueZhuo.jpg" width="12%" style="float:right; margin-left:10px;">
+<div id="org53f5974" class="figure">
+<p><img src="images/Bio_01_YueZhuo.jpg" alt="Bio_01_YueZhuo.jpg" width="30%" style="float:right; margin-left:10px;">
 </p>
 </div>
 
@@ -273,7 +249,7 @@ Massachusetts General Hospital<br>
 Harvard University<br>
 </p>
 
-<div id="outline-container-org2cb9809" class="outline-2">
+<div id="outline-container-education" class="outline-2">
 <h2 id="education">Education</h2>
 <div class="outline-text-2" id="text-education">
 <ul class="org-ul">
@@ -284,7 +260,7 @@ Harvard University<br>
 </div>
 </div>
 
-<div id="outline-container-orga3b8d73" class="outline-2">
+<div id="outline-container-experience" class="outline-2">
 <h2 id="experience">Experience</h2>
 <div class="outline-text-2" id="text-experience">
 <ul class="org-ul">
@@ -296,7 +272,7 @@ Harvard University<br>
 </div>
 </div>
 
-<div id="outline-container-orge64b188" class="outline-2">
+<div id="outline-container-selected_awards" class="outline-2">
 <h2 id="selected_awards">Selected Awards</h2>
 <div class="outline-text-2" id="text-selected_awards">
 <ol class="org-ol">
@@ -315,7 +291,7 @@ Harvard University<br>
 </div>
 </div>
 
-<div id="outline-container-orga53d7d5" class="outline-2">
+<div id="outline-container-online_research_profiles" class="outline-2">
 <h2 id="online_research_profiles">Online research profiles</h2>
 <div class="outline-text-2" id="text-online_research_profiles">
 <dl class="org-dl">
@@ -328,7 +304,7 @@ Harvard University<br>
 </div>
 <div id="postamble" class="status">
 <!-- <div class='footer'> -->
-<!--   Last updated 2021-02-25 Thu 02:24. (Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.3.1)) -->
+<!--   Last updated 2021-09-06 Mon 03:39. (Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.4.4)) -->
 <!-- </div> -->
 </div>
 </body>
