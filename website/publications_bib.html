@@ -21,7 +21,7 @@ and Schnell, Martin},
   publisher = {OSA},
   volume = {58},
   number = {5},
-  pages = {A55-A64},
+  pages = {A55--A64},
   optkeywords = {Confocal laser scanning microscopy; Image processing; Medical imaging; Mirau interferometry; Phase imaging; Phase modulation},
   abstract = {We present a technically simple implementation of quantitative phase imaging in confocal microscopy based on synthetic optical holography with sinusoidal-phase reference waves. Using a Mirau interference objective and low-amplitude vertical sample vibration with a piezo-controlled stage, we record synthetic holograms on commercial confocal microscopes (Nikon, model: A1R; Zeiss: model: LSM-880), from which quantitative phase images are reconstructed. We demonstrate our technique by stain-free imaging of cervical (HeLa) and ovarian (ES-2) cancer cells and stem cell (mHAT9a) samples. Our technique has the potential to extend fluorescence imaging applications in confocal microscopy by providing label-free cell finding, monitoring cell morphology, as well as non-perturbing long-time observation of live cells based on quantitative phase contrast.},
   issn = {1539-4522},
@@ -73,7 +73,7 @@ and Harley, Brendan},
   year = {2015},
   volume = {21},
   number = {1},
-  pages = {S237-S238},
+  pages = {S237--S238},
   issn = {1937-3341},
   opturl = {https://www.researchgate.net/publication/317378910_Label-Free_Analysis_of_Single_Hematopoietic_Stem_and_Progenitor_Cells}
 }
@@ -271,8 +271,12 @@ and Ma, Chao},
   title = {{F}ree-breathing 3{D} {C}ardiac {T}1 {M}apping with {T}ransmit {B}1 {C}orrection at 3{T}},
   journal = {Magnetic Resonance in Medicine},
   year = {2021},
+  optkeywords = {Cardiac T1 Mapping; Myocardial T1 Mapping; Free-breathing; Inversion Recovery; Transmit B1 Inhomogeneity; Low-Rank; Spoiled Gradient-echo; 3T},
+  abstract = {Purpose: To develop a cardiac T1 mapping method for free-breathing 3D T1 mapping of the wholeheart at 3T with transmit B1 (B1+) correctionMethods: A free-breathing, ECG-gated inversion recovery sequence with spoiled gradient-echoreadout was developed and optimized for cardiac T1 mapping at 3T. High-frame rate dynamicimages were reconstructed from sparse (k,t)-space data acquired along a stack-of-stars trajectoryusing a subspace-based method for accelerated imaging. Joint T1 and flip-angle (FA) estimationwas performed in T1 mapping to improve its robustness to B1+ inhomogeneity. Subject-specifictiming of data acquisition was utilized in the estimation to account for natural heart-rate variationsduring the imaging experiment.Results: Simulations showed that accuracy and precision of T1 mapping can be improved withjoint T1 and FA estimation and optimized ECG-gated SPGR-based IR acquisition scheme. Thephantom study showed good agreement between the T1 maps from the proposed method and thereference method. 3D cardiac T1 maps (40 slices) were obtained at a 1.9 mm in-plane and 4.5 mmthrough-plane spatial resolution from healthy subjects (n=6) with an average imaging time of 14.2{\textpm} 1.6 min (heartbeat rate: 64.2{\textpm}7.1 bpm), showing myocardial T1 values comparable to thoseobtained from MOLLI. The proposed method generated B1+ maps with spatially smooth variationshowing 21-32{\%} and 11-15{\%} variations across the septal-lateral and inferior-anterior regions ofthe myocardium in the left ventricle.Conclusion: The proposed method allows free-breathing 3D T1 mapping of the whole-heart withtransmit B1 correction in a practical imaging time.},
   doi = {10.1002/mrm.29097},
-  opturl = {https://doi.org/10.1002/mrm.29097}
+  opturl = {https://arxiv.org/abs/2111.07901},
+  opturl = {https://doi.org/10.1002/mrm.29097},
+  file = {docs/Han2021.pdf}
 }
 </pre>
 
@@ -413,6 +417,24 @@ and Ma, Chao},
 }
 </pre>
 
+<a name="Ma2022"></a><pre>
+@article{<a href="publications.html#Ma2022">Ma2022</a>,
+  author = {Ma, Chao
+and Han, Paul Kyu
+and Zhuo, Yue
+and Djebra, Yanis
+and Marin, Thibault
+and El Fakhri, Georges},
+  title = {{J}oint spectral quantification of {MR} spectroscopic imaging using linear tangent space alignment ({LTSA})-based manifold learning},
+  journal = {Magnetic Resonance in Medicine},
+  year = {2022},
+  optkeywords = {Mrsi; spectral quantification; manifold learning; linear tangent space alignment (LTSA)},
+  abstract = {Purpose: To develop a manifold learning-based method that leverages the intrinsic low-dimensional structure of MR Spectroscopic Imaging (MRSI) signals for joint spectral quantification.Methods: A linear tangent space alignment (LTSA) model was proposed to represent MRSI signals. In the proposed model, the signals of each metabolite were represented using a subspace model and the local coordinates of the subspaces were aligned to the global coordinates of the underlying low-dimensional manifold via linear transform. With the basis functions of the subspaces pre-determined via quantum mechanics simulations, the global coordinates F and the matrices for the local-to-global coordinate alignment were estimated by fitting the proposed LTSA model to noisy MRSI data with a spatial smoothness constraint on the global coordinates and a sparsity constraint on the matrices.Results: The performance of the proposed e method was validated using numerical simulation data and in vivo proton-MRSI experimental data acquired on healthy volunteers at 3T. The results of the proposed method were compared with the QUEST method and the subspace-based method. In all the compared cases, the proposed method achieved superior performance over the QUEST and the subspace-based methods both qualitatively in terms of noise and artifacts in the estimated metabolite concentration maps, and quantitatively in terms of spectral quantification accuracy measured by normalized root mean square errors.Conclusion: Joint spectral quantification using linear tangent space alignment-based manifold learning improves the accuracy of MRSI spectral quantification.},
+  doi = {10.1002/MRM.29526},
+  opturl = {https://doi.org/10.1002/MRM.29526}
+}
+</pre>
+
 <a name="Marin2021"></a><pre>
 @inproceedings{<a href="publications.html#Marin2021">Marin2021</a>,
   author = {Marin, Thibault
@@ -467,7 +489,11 @@ and El Fakhri, Georges},
   title = {{D}eep learning-based {GTV} contouring modeling inter- and intra- observer variability in sarcomas},
   journal = {Radiotherapy and Oncology},
   year = {2021},
+  optkeywords = {sarcoma; radiotherapy planning; computer-assisted; deep learning},
+  abstract = {Background and purposeThe delineation of the gross tumor volume (GTV) is a critical step for radiation therapy treatment planning. The delineation procedure is typically performed manually which exposes two major issues: cost and reproducibility. Delineation is a time-consuming process that is subject to inter- and intra-observer variability. While methods have been proposed to predict GTV contours, typical approaches ignore variability and therefore fail to utilize the valuable confidence information offered by multiple contours.Materials and methodsIn this work we propose an automatic GTV contouring method for softtissue sarcomas from X-ray computed tomography (CT) images, using deep learning by integrating inter- and intra-observer variability in the learned model. Sixty-eight patients with soft tissue and bone sarcomas were considered in this evaluation, all underwent pre-operative CT imaging used to perform GTV delineation. Four radiation oncologists and radiologists performed three contouring trials each for all patients. We quantify variability by defining confidence levels based on the frequency of inclusion of a given voxel into the GTV and use a deep convolutional neural network to learn GTV confidence maps.ResultsResults were compared to confidence maps from the four readers as well as groundtruth consensus contours established jointly by all readers. The resulting continuous Dice score between predicted and true confidence maps was 87{\%} and the Hausdorff distance was 14 mm. Conclusion: Results demonstrate the ability of the proposed method to predict accurate contours while utilizing variability and as such it can be used to improve clinical workflow.},
+  doi = {10.1016/j.radonc.2021.09.034},
   opturl = {https://arxiv.org/abs/2110.04721},
+  opturl = {https://doi.org/10.1016/j.radonc.2021.09.034},
   file = {docs/Marin2021b.pdf}
 }
 </pre>
